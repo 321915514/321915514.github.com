@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://philxling.cn/"/>
-  <updated>2020-03-15T05:40:56.537Z</updated>
+  <updated>2020-03-15T06:03:06.059Z</updated>
   <id>http://philxling.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java</title>
+    <link href="http://philxling.cn/2020/03/15/java/"/>
+    <id>http://philxling.cn/2020/03/15/java/</id>
+    <published>2020-03-15T05:49:11.000Z</published>
+    <updated>2020-03-15T06:03:06.059Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/.cn//1567742198701.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/.cn//1567742198701.png&quot; alt&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://philxling.cn/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://philxling.cn/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>python爬虫基础</title>
