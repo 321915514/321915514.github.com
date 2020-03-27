@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://philxling.cn">
-  <title>mysql查询2 | philxling</title>
+  <title>mysql查询1 | philxling</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="mysql查询2作者: philxling 通过多个表,然后用log记录的方式记录知识:">
+  <meta name="description" content="mysql查询基本知识,通过记录log的方式记录知识点作者: philxling mysql&gt; select goods_name,goods_id, concat(“HTC”,substring(goods_name,4)) as name from goods where goods_name like “诺基亚%”;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql查询2">
-<meta property="og:url" content="http://philxling.cn/2020/03/08/mysql%E6%9F%A5%E8%AF%A22/index.html">
+<meta property="og:title" content="mysql查询1">
+<meta property="og:url" content="http://philxling.cn/2020/03/04/mysql2/index.html">
 <meta property="og:site_name" content="philxling">
-<meta property="og:description" content="mysql查询2作者: philxling 通过多个表,然后用log记录的方式记录知识:">
+<meta property="og:description" content="mysql查询基本知识,通过记录log的方式记录知识点作者: philxling mysql&gt; select goods_name,goods_id, concat(“HTC”,substring(goods_name,4)) as name from goods where goods_name like “诺基亚%”;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-08T04:00:25.000Z">
-<meta property="article:modified_time" content="2020-03-15T06:31:02.281Z">
+<meta property="article:published_time" content="2020-03-04T04:32:08.000Z">
+<meta property="article:modified_time" content="2020-03-15T05:41:25.778Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="spider">
 <meta property="article:tag" content=" python">
@@ -214,14 +214,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql查询2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mysql2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      mysql查询2
+      mysql查询1
     </h1>
   
 
@@ -233,8 +233,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/03/08/mysql%E6%9F%A5%E8%AF%A22/" class="archive-article-date">
-        <time datetime="2020-03-08T04:00:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
+<a href="/2020/03/04/mysql2/" class="archive-article-date">
+        <time datetime="2020-03-04T04:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
 </a>
 
   
@@ -247,7 +247,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">22.3k字</span>
+      <span class="post-count">21.1k字</span>
     </span>
   </span>
 
@@ -256,7 +256,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">117分</span>
+      <span class="post-count">110分</span>
     </span>
   </span>
 </div>
@@ -267,15 +267,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="mysql查询2"><a href="#mysql查询2" class="headerlink" title="mysql查询2"></a>mysql查询2</h2><p>作者: philxling</p>
-<p>通过多个表,然后用log记录的方式记录知识:</p>
+    <h2 id="mysql查询基本知识-通过记录log的方式记录知识点"><a href="#mysql查询基本知识-通过记录log的方式记录知识点" class="headerlink" title="mysql查询基本知识,通过记录log的方式记录知识点"></a>mysql查询基本知识,通过记录log的方式记录知识点</h2><p>作者: philxling</p>
+<p>mysql&gt; select goods_name,goods_id, concat(“HTC”,substring(goods_name,4)) as name from goods where goods_name like “诺基亚%”;</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line">create table goods (</span><br><span class="line">  goods_id mediumint(8) unsigned primary key auto_increment,</span><br><span class="line">  goods_name varchar(120) not null default &#39;&#39;,</span><br><span class="line">  cat_id smallint(5) unsigned not null default &#39;0&#39;,</span><br><span class="line">  brand_id smallint(5) unsigned not null default &#39;0&#39;,</span><br><span class="line">  goods_sn char(15) not null default &#39;&#39;,</span><br><span class="line">  goods_number smallint(5) unsigned not null default &#39;0&#39;,</span><br><span class="line">  shop_price decimal(10,2) unsigned not null default &#39;0.00&#39;,</span><br><span class="line">  market_price decimal(10,2) unsigned not null default &#39;0.00&#39;,</span><br><span class="line">  click_count int(10) unsigned not null default &#39;0&#39;</span><br><span class="line">) engine&#x3D;myisam default charset&#x3D;utf8;</span><br><span class="line">insert into &#96;goods&#96; values (1,&#39;kd876&#39;,4,8,&#39;ecs000000&#39;,1,1388.00,1665.60,9),</span><br><span class="line">(4,&#39;诺基亚n85原装充电器&#39;,8,1,&#39;ecs000004&#39;,17,58.00,69.60,0),</span><br><span class="line">(3,&#39;诺基亚原装5800耳机&#39;,8,1,&#39;ecs000002&#39;,24,68.00,81.60,3),</span><br><span class="line">(5,&#39;索爱原装m2卡读卡器&#39;,11,7,&#39;ecs000005&#39;,8,20.00,24.00,3),</span><br><span class="line">(6,&#39;胜创kingmax内存卡&#39;,11,0,&#39;ecs000006&#39;,15,42.00,50.40,0),</span><br><span class="line">(7,&#39;诺基亚n85原装立体声耳机hs-82&#39;,8,1,&#39;ecs000007&#39;,20,100.00,120.00,0),</span><br><span class="line">(8,&#39;飞利浦9@9v&#39;,3,4,&#39;ecs000008&#39;,1,399.00,478.79,10),</span><br><span class="line">(9,&#39;诺基亚e66&#39;,3,1,&#39;ecs000009&#39;,4,2298.00,2757.60,20),</span><br><span class="line">(10,&#39;索爱c702c&#39;,3,7,&#39;ecs000010&#39;,7,1328.00,1593.60,11),</span><br><span class="line">(11,&#39;索爱c702c&#39;,3,7,&#39;ecs000011&#39;,1,1300.00,0.00,0),</span><br><span class="line">(12,&#39;摩托罗拉a810&#39;,3,2,&#39;ecs000012&#39;,8,983.00,1179.60,13),</span><br><span class="line">(13,&#39;诺基亚5320 xpressmusic&#39;,3,1,&#39;ecs000013&#39;,8,1311.00,1573.20,13),</span><br><span class="line">(14,&#39;诺基亚5800xm&#39;,4,1,&#39;ecs000014&#39;,1,2625.00,3150.00,6),</span><br><span class="line">(15,&#39;摩托罗拉a810&#39;,3,2,&#39;ecs000015&#39;,3,788.00,945.60,8),</span><br><span class="line">(16,&#39;恒基伟业g101&#39;,2,11,&#39;ecs000016&#39;,0,823.33,988.00,3),</span><br><span class="line">(17,&#39;夏新n7&#39;,3,5,&#39;ecs000017&#39;,1,2300.00,2760.00,2),</span><br><span class="line">(18,&#39;夏新t5&#39;,4,5,&#39;ecs000018&#39;,1,2878.00,3453.60,0),</span><br><span class="line">(19,&#39;三星sgh-f258&#39;,3,6,&#39;ecs000019&#39;,12,858.00,1029.60,7),</span><br><span class="line">(20,&#39;三星bc01&#39;,3,6,&#39;ecs000020&#39;,12,280.00,336.00,14),</span><br><span class="line">(21,&#39;金立 a30&#39;,3,10,&#39;ecs000021&#39;,40,2000.00,2400.00,4),</span><br><span class="line">(22,&#39;多普达touch hd&#39;,3,3,&#39;ecs000022&#39;,1,5999.00,7198.80,16),</span><br><span class="line">(23,&#39;诺基亚n96&#39;,5,1,&#39;ecs000023&#39;,8,3700.00,4440.00,17),</span><br><span class="line">(24,&#39;p806&#39;,3,9,&#39;ecs000024&#39;,100,2000.00,2400.00,35),</span><br><span class="line">(25,&#39;小灵通&#x2F;固话50元充值卡&#39;,13,0,&#39;ecs000025&#39;,2,48.00,57.59,0),</span><br><span class="line">(26,&#39;小灵通&#x2F;固话20元充值卡&#39;,13,0,&#39;ecs000026&#39;,2,19.00,22.80,0),</span><br><span class="line">(27,&#39;联通100元充值卡&#39;,15,0,&#39;ecs000027&#39;,2,95.00,100.00,0),</span><br><span class="line">(28,&#39;联通50元充值卡&#39;,15,0,&#39;ecs000028&#39;,0,45.00,50.00,0),</span><br><span class="line">(29,&#39;移动100元充值卡&#39;,14,0,&#39;ecs000029&#39;,0,90.00,0.00,0),</span><br><span class="line">(30,&#39;移动20元充值卡&#39;,14,0,&#39;ecs000030&#39;,9,18.00,21.00,1),</span><br><span class="line">(31,&#39;摩托罗拉e8 &#39;,3,2,&#39;ecs000031&#39;,1,1337.00,1604.39,5),</span><br><span class="line">(32,&#39;诺基亚n85&#39;,3,1,&#39;ecs000032&#39;,4,3010.00,3612.00,9);</span><br><span class="line">create table category (</span><br><span class="line">cat_id smallint unsigned auto_increment primary key,</span><br><span class="line">cat_name varchar(90) not null default &#39;&#39;,</span><br><span class="line">parent_id smallint unsigned</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">INSERT INTO &#96;category&#96; VALUES</span><br><span class="line">(1,&#39;手机类型&#39;,0),</span><br><span class="line">(2,&#39;CDMA手机&#39;,1),</span><br><span class="line">(3,&#39;GSM手机&#39;,1),</span><br><span class="line">(4,&#39;3G手机&#39;,1),</span><br><span class="line">(5,&#39;双模手机&#39;,1),</span><br><span class="line">(6,&#39;手机配件&#39;,0),</span><br><span class="line">(7,&#39;充电器&#39;,6),</span><br><span class="line">(8,&#39;耳机&#39;,6),</span><br><span class="line">(9,&#39;电池&#39;,6),</span><br><span class="line">(11,&#39;读卡器和内存卡&#39;,6),</span><br><span class="line">(12,&#39;充值卡&#39;,0),</span><br><span class="line">(13,&#39;小灵通&#x2F;固话充值卡&#39;,12),</span><br><span class="line">(14,&#39;移动手机充值卡&#39;,12),</span><br><span class="line">(15,&#39;联通手机充值卡&#39;,12);</span><br><span class="line">CREATE TABLE &#96;result&#96; (</span><br><span class="line">  &#96;name&#96; varchar(20) DEFAULT NULL,</span><br><span class="line">  &#96;subject&#96; varchar(20) DEFAULT NULL,</span><br><span class="line">  &#96;score&#96; tinyint(4) DEFAULT NULL</span><br><span class="line">) ENGINE&#x3D;MyISAM DEFAULT CHARSET&#x3D;utf8;</span><br><span class="line">insert into result</span><br><span class="line">values</span><br><span class="line">(&#39;张三&#39;,&#39;数学&#39;,90),</span><br><span class="line">(&#39;张三&#39;,&#39;语文&#39;,50),</span><br><span class="line">(&#39;张三&#39;,&#39;地理&#39;,40),</span><br><span class="line">(&#39;李四&#39;,&#39;语文&#39;,55),</span><br><span class="line">(&#39;李四&#39;,&#39;政治&#39;,45),</span><br><span class="line">(&#39;王五&#39;,&#39;政治&#39;,30);</span><br><span class="line">create table a (</span><br><span class="line">id char(1),</span><br><span class="line">num int</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">insert into a values (&#39;a&#39;,5),(&#39;b&#39;,10),(&#39;c&#39;,15),(&#39;d&#39;,10);</span><br><span class="line">create table b (</span><br><span class="line">id char(1),</span><br><span class="line">num int</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">insert into b values (&#39;b&#39;,5),(&#39;c&#39;,15),(&#39;d&#39;,20),(&#39;e&#39;,99);</span><br><span class="line">create table m(</span><br><span class="line">     mid int,</span><br><span class="line">     hid int,</span><br><span class="line">     gid int,</span><br><span class="line">     mres varchar(10),</span><br><span class="line">     matime date</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">create table t (</span><br><span class="line">     tid int,</span><br><span class="line">     tname varchar(20)</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">insert into m</span><br><span class="line">     values</span><br><span class="line">     (1,1,2,&#39;2:0&#39;,&#39;2006-05-21&#39;),</span><br><span class="line">     (2,2,3,&#39;1:2&#39;,&#39;2006-06-21&#39;),</span><br><span class="line">     (3,3,1,&#39;2:5&#39;,&#39;2006-06-25&#39;),</span><br><span class="line">     (4,2,1,&#39;3:2&#39;,&#39;2006-07-21&#39;);</span><br><span class="line">insert into t</span><br><span class="line">     values</span><br><span class="line">     (1,&#39;国安&#39;),</span><br><span class="line">     (2,&#39;申花&#39;),</span><br><span class="line">     (3,&#39;布尔联队&#39;);</span><br><span class="line">create table mian ( num int) engine myisam;</span><br><span class="line">insert into mian values</span><br><span class="line">(3),</span><br><span class="line">(12),</span><br><span class="line">(15),</span><br><span class="line">(25),</span><br><span class="line">(23),</span><br><span class="line">(29),</span><br><span class="line">(34),</span><br><span class="line">(37),</span><br><span class="line">(32);</span><br><span class="line">create table user (</span><br><span class="line">uid int primary key auto_increment,</span><br><span class="line">name varchar(20) not null default &#39;&#39;,</span><br><span class="line">age smallint unsigned not null default 0</span><br><span class="line">) engine myisam charset utf8;</span><br><span class="line">create table boy (</span><br><span class="line">    hid char(1),</span><br><span class="line">     bname varchar(20)</span><br><span class="line">)engine myisam charset utf8;</span><br><span class="line">insert into boy (bname,hid)</span><br><span class="line">     values</span><br><span class="line">     (&#39;屌丝&#39;,&#39;A&#39;),</span><br><span class="line">     (&#39;杨过&#39;,&#39;B&#39;),</span><br><span class="line">     (&#39;陈冠希&#39;,&#39;C&#39;);</span><br><span class="line">create table girl (</span><br><span class="line">    hid char(1),</span><br><span class="line">     gname varchar(20)</span><br><span class="line">     )engine myisam charset utf8;</span><br><span class="line">insert into girl(gname,hid)</span><br><span class="line">     values</span><br><span class="line">     (&#39;小龙女&#39;,&#39;B&#39;),</span><br><span class="line">     (&#39;张柏芝&#39;,&#39;C&#39;),</span><br><span class="line">     (&#39;死宅女&#39;,&#39;D&#39;);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>mysql&gt; select goods_name,goods_id, concat(“HTC”,substring(goods_name,4)) as name from goods where goods_name like “诺基亚%”;<br>+—————————————-+———-+———————————-+<br>| goods_name                             | goods_id | name                             |<br>+—————————————-+———-+———————————-+<br>| 诺基亚n85原装充电器                    |        4 | HTCn85原装充电器                 |<br>| 诺基亚原装5800耳机                     |        3 | HTC原装5800耳机                  |<br>| 诺基亚n85原装立体声耳机hs-82           |        7 | HTCn85原装立体声耳机hs-82        |<br>| 诺基亚e66                              |        9 | HTCe66                           |<br>| 诺基亚5320 xpressmusic                 |       13 | HTC5320 xpressmusic              |<br>| 诺基亚5800xm                           |       14 | HTC5800xm                        |<br>| 诺基亚n96                              |       23 | HTCn96                           |<br>| 诺基亚n85                              |       32 | HTCn85                           |<br>+—————————————-+———-+———————————-+<br>8 rows in set (0.00 sec)</p>
+<p>+—————————————-+———-+———————————-+<br>| goods_name                             | goods_id | name                             |<br>+—————————————-+———-+———————————-+<br>| 诺基亚n85原装充电器                    |        4 | HTCn85原装充电器                 |<br>| 诺基亚原装5800耳机                     |        3 | HTC原装5800耳机                  |<br>| 诺基亚n85原装立体声耳机hs-82           |        7 | HTCn85原装立体声耳机hs-82        |<br>| 诺基亚e66                              |        9 | HTCe66                           |<br>| 诺基亚5320 xpressmusic                 |       13 | HTC5320 xpressmusic              |<br>| 诺基亚5800xm                           |       14 | HTC5800xm                        |<br>| 诺基亚n96                              |       23 | HTCn96                           |<br>| 诺基亚n85                              |       32 | HTCn85                           |<br>+—————————————-+———-+———————————-+<br>8 rows in set (0.00 sec)</p>
 <p>mysql&gt; select * from mian<br>    -&gt; ;<br>+——+<br>| num  |<br>+——+<br>|    3 |<br>|   12 |<br>|   15 |<br>|   20 |<br>|   20 |<br>|   20 |<br>|   30 |<br>|   30 |<br>|   30 |<br>+——+<br>9 rows in set (0.00 sec)</p>
 <p>mysql&gt; #取出第三个栏目下价格小于1000或者大于3000 同时点击量大于5的商品<br>mysql&gt; select goods_id ,goods_name, shop_price,cat_id,click_count from goods where cat_id=3 and (shop_price&lt;1000 || shop_price&gt;3000) and click_count &gt;=5 ;<br>+———-+——————-+————+——–+————-+<br>| goods_id | goods_name        | shop_price | cat_id | click_count |<br>+———-+——————-+————+——–+————-+<br>|        8 | 飞利浦9@9v        |     399.00 |      3 |          10 |<br>|       12 | 摩托罗拉a810      |     983.00 |      3 |          13 |<br>|       15 | 摩托罗拉a810      |     788.00 |      3 |           8 |<br>|       19 | 三星sgh-f258      |     858.00 |      3 |           7 |<br>|       20 | 三星bc01          |     280.00 |      3 |          14 |<br>|       22 | 多普达touch hd    |    5999.00 |      3 |          16 |<br>|       32 | 诺基亚n85         |    3010.00 |      3 |           9 |<br>+———-+——————-+————+——–+————-+<br>7 rows in set (0.00 sec)</p>
 <p>mysql&gt; #最贵的商品的价格<br>mysql&gt; select max(shop_price) from goods;<br>+—————–+<br>| max(shop_price) |<br>+—————–+<br>|         5999.00 |<br>+—————–+<br>1 row in set (0.06 sec)</p>
@@ -591,7 +587,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://philxling.cn/2020/03/08/mysql查询2/" title="mysql查询2" target="_blank">http://philxling.cn/2020/03/08/mysql查询2/</a>
+          <a href="http://philxling.cn/2020/03/04/mysql2/" title="mysql查询1" target="_blank">http://philxling.cn/2020/03/04/mysql2/</a>
         </li>
         
         <li>
@@ -606,11 +602,6 @@
 
   </div>
   <div class="article-info article-info-index">
-    
-    <div class="article-pop-out tagcloud">
-      <i class="icon-tuding"></i>
-      <a class="article-tag-list-link color3">置顶</a>
-    </div>
     
     
     
@@ -674,7 +665,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://philxling.cn/2020/03/08/mysql%E6%9F%A5%E8%AF%A22/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://philxling.cn/2020/03/04/mysql2/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -689,20 +680,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/03/13/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/08/mysql1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          爬虫前奏
+          mysql查询2
         
       </div>
     </a>
   
-  
-    <a href="/2020/03/04/mysql%E6%9F%A5%E8%AF%A21/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mysql查询1</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -892,11 +878,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
               </li>
             
             <div class="clearfix"></div>
