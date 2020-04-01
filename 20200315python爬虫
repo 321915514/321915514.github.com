@@ -106,28 +106,28 @@
 <meta name="description" content="python爬虫基础 urllib库,url库含有四个模块  request 是最基本的请求方式,error是异常处理信息,parse是解析的工具类,你可以将没有编码的url放在parse工具中编码和解码,robotparser主要是用来识别网站的 robots.txt 文件.  例:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫">
-<meta property="og:url" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/index.html">
+<meta property="og:url" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB">
 <meta property="og:site_name" content="philxling">
 <meta property="og:description" content="python爬虫基础 urllib库,url库含有四个模块  request 是最基本的请求方式,error是异常处理信息,parse是解析的工具类,你可以将没有编码的url放在parse工具中编码和解码,robotparser主要是用来识别网站的 robots.txt 文件.  例:">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200228161318410.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200228175101405.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200228175137667.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200305165442113.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200305162348095.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200305162546702.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200305162952859.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200306135437033.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200306140125182.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200306141415606.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200306141525160.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200306165729994.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200228161318410.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200228175101405.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200228175137667.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200305165442113.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200305162348095.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200305162546702.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200305162952859.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200306135437033.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200306140125182.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200306141415606.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200306141525160.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200306165729994.png">
 <meta property="article:published_time" content="2020-03-15T05:36:19.000Z">
 <meta property="article:modified_time" content="2020-03-15T10:18:57.055Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="爬虫">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/image-20200228161318410.png">
+<meta name="twitter:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%A/image-20200228161318410.png">
 
 
 
@@ -159,7 +159,7 @@
 
 
 
-  <link rel="canonical" href="http://philxling.cn/z_post/python爬虫/"/>
+  <link rel="canonical" href="http://philxling.cn/20200315python爬虫"/>
 
 
 
@@ -335,7 +335,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -525,10 +525,10 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//字符转json</span><br><span class="line">json.dumps(json_str)</span><br><span class="line">//json转python对象</span><br><span class="line">json.loads(json字符串)</span><br></pre></td></tr></table></figure>
 
 <p>将json写入文件</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200228161318410.png" alt="image-20200228161318410"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200228161318410.png" alt="image-20200228161318410"></p>
 <p>csv文件</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200228175101405.png" alt="image-20200228175101405"></p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200228175137667.png" alt="image-20200228175137667"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200228175101405.png" alt="image-20200228175101405"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200228175137667.png" alt="image-20200228175137667"></p>
 <p>多线程</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">value = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">writer_</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> value</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000000</span>):</span><br><span class="line">        value += <span class="number">1</span></span><br><span class="line">    print(value)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drawing</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> value</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000000</span>):</span><br><span class="line">        value += <span class="number">1</span></span><br><span class="line">    print(value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    threading.Thread(target=writer_).start()</span><br><span class="line">    threading.Thread(target=drawing).start()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br><span class="line"><span class="comment">#  1254106</span></span><br><span class="line"><span class="comment">#  1396958</span></span><br><span class="line"><span class="comment"># 出现线程抢占问题</span></span><br></pre></td></tr></table></figure>
 
@@ -586,7 +586,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    pytesseract.pytesseract.tesseract_cmd = <span class="string">r'D:\Program Files\Tesseract-OCR\tesseract.exe'</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        time_stamp = int(time.time())</span><br><span class="line">        url = <span class="string">'http://47.103.204.177/BookStore/Vcode?a=%d'</span> % time_stamp</span><br><span class="line">        request.urlretrieve(url, <span class="string">'captcha.png'</span>)</span><br><span class="line">        image = Image.open(<span class="string">'captcha.png'</span>)</span><br><span class="line">        text = pytesseract.image_to_string(image)</span><br><span class="line">        print(text)</span><br><span class="line">        time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
 <p>Scrapy框架</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200305165442113.png" alt="image-20200305165442113"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200305165442113.png" alt="image-20200305165442113"></p>
 <p>安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy</span><br><span class="line"># windows下还要安装</span><br><span class="line">pip install pypiwin32</span><br></pre></td></tr></table></figure>
 
@@ -599,12 +599,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject 项目名称</span><br></pre></td></tr></table></figure>
 
 <p>目录结构</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200305162348095.png" alt="image-20200305162348095"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200305162348095.png" alt="image-20200305162348095"></p>
 <p>使用命令生成一个爬虫</p>
 <p>项目路径:</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200305162546702.png" alt="image-20200305162546702"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200305162546702.png" alt="image-20200305162546702"></p>
 <p>进入项目下创建</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200305162952859.png" alt="image-20200305162952859"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200305162952859.png" alt="image-20200305162952859"></p>
 <p>(创建爬虫项目要与项目名不一样)</p>
 <p>生成项目</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QsbkSpiderSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'qsbk_spider'</span></span><br><span class="line">    allowed_domains = [<span class="string">'funnyba.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'http://funnyba.com/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
@@ -629,7 +629,7 @@
 
 <p>Rule 规则类</p>
 <p>创建crawl模板的spider</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200306135437033.png" alt="image-20200306135437033"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200306135437033.png" alt="image-20200306135437033"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject 项目名称</span><br><span class="line">进入项目下</span><br><span class="line">即cd 项目名称</span><br><span class="line">创建 crawl模板的spider</span><br><span class="line">scrapy genspider -t crawl wxapp_spider &quot;域名&quot;</span><br></pre></td></tr></table></figure>
 
 <p>需要使用LinkExtractors和Rule 规则</p>
@@ -645,13 +645,13 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define here the models for your scraped items</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># See documentation in:</span></span><br><span class="line"><span class="comment"># https://docs.scrapy.org/en/latest/topics/items.html</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WxappItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    title = scrapy.Field()</span><br><span class="line">    author = scrapy.Field()</span><br><span class="line">    pub_time = scrapy.Field()</span><br><span class="line">    content = scrapy.Field()</span><br></pre></td></tr></table></figure>
 
 <p>Scrapy shell </p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200306140125182.png" alt="image-20200306140125182"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200306140125182.png" alt="image-20200306140125182"></p>
 <p>request和response对象</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200306141415606.png" alt="image-20200306141415606"></p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200306141525160.png" alt="image-20200306141525160"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200306141415606.png" alt="image-20200306141415606"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200306141525160.png" alt="image-20200306141525160"></p>
 <p>发送post请求</p>
 <p>重写start_request方法,使用FormRequest()</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB/image-20200306165729994.png" alt="image-20200306165729994"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%A/image-20200306165729994.png" alt="image-20200306165729994"></p>
 <p>模拟登录豆瓣网</p>
 
       
@@ -719,7 +719,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/" title="python爬虫">http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/</a>
+    <a href="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB" title="python爬虫">http://philxling.cn/20200315python%E7%88%AC%E8%99%AB</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -759,7 +759,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/z_post/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/" rel="next" title="爬虫前奏">
+              <a href="/202003131-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F" rel="next" title="爬虫前奏">
                 <i class="fa fa-chevron-left"></i> 爬虫前奏
               </a>
             
@@ -769,7 +769,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/z_post/c%E8%AF%AD%E8%A8%80%E5%88%B0cplus/" rel="prev" title="c语言">
+              <a href="/20200315c%E8%AF%AD%E8%A8%80%E5%88%B0cplus" rel="prev" title="c语言">
                 c语言 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -933,29 +933,29 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">philxling</span>
-
+	<div class="theme-info">
+	  <div class="powered-by"></div>
+	  <span class="post-count"><i class="fa fa-area-chart"> 博客全站共</i>71k字</span>
+	</div>
   
+</div>
+<div class="busuanzi-count">
+  <script async="" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  <span class="site-uv">
+  <i class="fa fa-user"> 本站访客数</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+  人
+  </span>
+
+  <span class="site-pv">
+  <i class="fa fa-eye"> 本站总访问量</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+  次
+  </span>
 </div>
 
-<!--<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>-->
-
-
-
-
-
-
-
-
-
-
-<!--
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
 
 
 
@@ -964,44 +964,17 @@
 
 
   <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
--->
 
-
-<!--
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">博客全站共71k字</span>
-</div>-->
-
-
-
-<!-- 新增访客统计代码-->
-<div class="busuanzi-count">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      访问用户:<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人
-    </span>
-    <div class="powered-by"></div>
-    <span class="site-uv">
-      <i class="fa fa-eye"></i>
-      访问次数:<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
-    </span>
-    <!-- 博客字数统计 -->
-    <span class="site-pv">
-      <i class="fa fa-pencil"></i>
-      博客全站共:<span class="post-count">71k</span>字
-    </span>
-</div>
 
 
 <!-- 在网页底部添加网站运行时间 -->
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<div>
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+</div>
 <script>
     var now = new Date();
     function createtime() {
-        var grt= new Date("01/23/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+        var grt= new Date("01/01/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
         now.setTime(now.getTime()+250);
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
@@ -1017,9 +990,6 @@ setInterval("createtime()",250);
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</div>
 
 
 

@@ -106,21 +106,21 @@
 <meta name="description" content="下载器中间件middleware主要有两个类 12process_request(spider,request)process_response()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫续">
-<meta property="og:url" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/index.html">
+<meta property="og:url" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%AD">
 <meta property="og:site_name" content="philxling">
 <meta property="og:description" content="下载器中间件middleware主要有两个类 12process_request(spider,request)process_response()">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315185902579.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315190017859.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315185421927.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315191040143.png">
-<meta property="og:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200317022109645.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315185902579.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315190017859.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315185421927.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315191040143.png">
+<meta property="og:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200317022109645.png">
 <meta property="article:published_time" content="2020-03-15T10:50:29.000Z">
 <meta property="article:modified_time" content="2020-03-16T17:37:50.645Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="python爬虫">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315185902579.png">
+<meta name="twitter:image" content="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315185902579.png">
 
 
 
@@ -152,7 +152,7 @@
 
 
 
-  <link rel="canonical" href="http://philxling.cn/z_post/python爬虫续/"/>
+  <link rel="canonical" href="http://philxling.cn/20200315python爬虫续"/>
 
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%AD">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -459,13 +459,13 @@
 <a id="more"></a>
 
 <p>使用随机请求头请求url</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315185902579.png" alt="image-20200315185902579"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315185902579.png" alt="image-20200315185902579"></p>
 <p>使用随机ip代理</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315190017859.png" alt="image-20200315190017859"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315190017859.png" alt="image-20200315190017859"></p>
 <p>使用独享代理ip访问</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315185421927.png" alt="使用随机ip代理"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315185421927.png" alt="使用随机ip代理"></p>
 <p>创建爬取boss直聘网的项目使用crawl模板</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200315191040143.png" alt="image-20200315191040143"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200315191040143.png" alt="image-20200315191040143"></p>
 <p>全站爬取简书网</p>
 <p>爬取规则</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rules = (</span><br><span class="line">    Rule(LinkExtractor(allow=<span class="string">r'.*/p/[0-9a-z]&#123;12&#125;.*'</span>), callback=<span class="string">'parse_detail'</span>, follow=<span class="literal">True</span>),</span><br><span class="line">)</span><br><span class="line"><span class="comment"># allow 采用正则表达式的方式 .*表示可有可无</span></span><br></pre></td></tr></table></figure>
@@ -480,7 +480,7 @@
 
 <p>采用selenium和webdriver和scrapy和mysql的方式爬取信息</p>
 <p>项目结构</p>
-<p><img src="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/image-20200317022109645.png" alt="image-20200317022109645"></p>
+<p><img src="/20200315python%E7%88%AC%E8%99%AB%E7%BB%A/image-20200317022109645.png" alt="image-20200317022109645"></p>
 <p>jianshu.py</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy.linkextractors <span class="keyword">import</span> LinkExtractor</span><br><span class="line"><span class="keyword">from</span> scrapy.spiders <span class="keyword">import</span> CrawlSpider, Rule</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> jianshu_spider.items <span class="keyword">import</span> ArticleItem</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JianshuSpider</span><span class="params">(CrawlSpider)</span>:</span></span><br><span class="line">    name = <span class="string">'jianshu'</span></span><br><span class="line">    allowed_domains = [<span class="string">'jianshu.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'https://www.jianshu.com/'</span>]</span><br><span class="line"></span><br><span class="line">    rules = (</span><br><span class="line">        Rule(LinkExtractor(allow=<span class="string">r'.*/p/[0-9a-z]&#123;12&#125;.*'</span>), callback=<span class="string">'parse_detail'</span>, follow=<span class="literal">True</span>),</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse_detail</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="comment"># item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()</span></span><br><span class="line">        <span class="comment"># item['name'] = response.xpath('//div[@id="name"]').get()</span></span><br><span class="line">        <span class="comment"># item['description'] = response.xpath('//div[@id="description"]').get()</span></span><br><span class="line">        title = response.xpath(<span class="string">"//h1[@class='_1RuRku']//text()"</span>).get()</span><br><span class="line">        author = response.xpath(<span class="string">"//span[@class='_22gUMi']/text()"</span>).get()</span><br><span class="line">        pub_time = response.xpath(<span class="string">"//div[@class='s-dsoj']//time/text()"</span>).get()</span><br><span class="line">        article_id = response.url.split(<span class="string">"/"</span>)[<span class="number">-1</span>]</span><br><span class="line">        origin_url = response.url</span><br><span class="line">        content = response.xpath(<span class="string">"//article[@class='_2rhmJa']"</span>).get()</span><br><span class="line">        item = ArticleItem(</span><br><span class="line">            title=title,</span><br><span class="line">            article_id=article_id, origin_url=origin_url, author=author, content=content, pub_time=pub_time</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
 
@@ -561,7 +561,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/" title="python爬虫续">http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/</a>
+    <a href="http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%AD" title="python爬虫续">http://philxling.cn/20200315python%E7%88%AC%E8%99%AB%E7%BB%AD</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -601,7 +601,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/z_post/c%E8%AF%AD%E8%A8%80%E5%88%B0cplus/" rel="next" title="c语言">
+              <a href="/20200315c%E8%AF%AD%E8%A8%80%E5%88%B0cplus" rel="next" title="c语言">
                 <i class="fa fa-chevron-left"></i> c语言
               </a>
             
@@ -611,7 +611,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/z_post/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" rel="prev" title="http协议和Chrome抓包工具">
+              <a href="/202003192-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7" rel="prev" title="http协议和Chrome抓包工具">
                 http协议和Chrome抓包工具 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -775,29 +775,29 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">philxling</span>
-
+	<div class="theme-info">
+	  <div class="powered-by"></div>
+	  <span class="post-count"><i class="fa fa-area-chart"> 博客全站共</i>71k字</span>
+	</div>
   
+</div>
+<div class="busuanzi-count">
+  <script async="" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  <span class="site-uv">
+  <i class="fa fa-user"> 本站访客数</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+  人
+  </span>
+
+  <span class="site-pv">
+  <i class="fa fa-eye"> 本站总访问量</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+  次
+  </span>
 </div>
 
-<!--<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>-->
-
-
-
-
-
-
-
-
-
-
-<!--
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
 
 
 
@@ -806,44 +806,17 @@
 
 
   <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
--->
 
-
-<!--
-<div class="theme-info">
-  <div class="powered-by"></div>
-  <span class="post-count">博客全站共71k字</span>
-</div>-->
-
-
-
-<!-- 新增访客统计代码-->
-<div class="busuanzi-count">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      访问用户:<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人
-    </span>
-    <div class="powered-by"></div>
-    <span class="site-uv">
-      <i class="fa fa-eye"></i>
-      访问次数:<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
-    </span>
-    <!-- 博客字数统计 -->
-    <span class="site-pv">
-      <i class="fa fa-pencil"></i>
-      博客全站共:<span class="post-count">71k</span>字
-    </span>
-</div>
 
 
 <!-- 在网页底部添加网站运行时间 -->
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<div>
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+</div>
 <script>
     var now = new Date();
     function createtime() {
-        var grt= new Date("01/23/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+        var grt= new Date("01/01/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
         now.setTime(now.getTime()+250);
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
@@ -859,9 +832,6 @@ setInterval("createtime()",250);
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</div>
 
 
 
