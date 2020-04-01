@@ -276,26 +276,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -328,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/21/4-requests%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/4-requests%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -347,7 +343,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/21/4-requests%E5%BA%93/" itemprop="url">requests库</a></h1>
+                <a class="post-title-link" href="/z_post/4-requests%E5%BA%93/" itemprop="url">requests库</a></h1>
         
 
         <div class="post-meta">
@@ -454,7 +450,7 @@
           <h1 id="4-requests库"><a href="#4-requests库" class="headerlink" title="4-requests库"></a>4-requests库</h1><p>虽然Python的标准库中 urllib模块已经包含了平常我们使用的大多数功能，但是它的 API 使用起来让人感觉不太好，而 Requests宣传是 “HTTP for Humans”，说明使用更简洁方便。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/21/4-requests%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/z_post/4-requests%E5%BA%93/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -512,7 +508,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/20/3-urllib%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/3-urllib%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -531,7 +527,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/20/3-urllib%E5%BA%93/" itemprop="url">urllib库</a></h1>
+                <a class="post-title-link" href="/z_post/3-urllib%E5%BA%93/" itemprop="url">urllib库</a></h1>
         
 
         <div class="post-meta">
@@ -638,7 +634,7 @@
           <h1 id="3-urllib库"><a href="#3-urllib库" class="headerlink" title="3-urllib库"></a>3-urllib库</h1><p><code>urllib</code>库是<code>Python</code>中一个最基本的网络请求库。可以模拟浏览器的行为，向指定的服务器发送一个请求，并可以保存服务器返回的数据。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/20/3-urllib%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/z_post/3-urllib%E5%BA%93/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -696,7 +692,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/19/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -715,7 +711,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/19/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" itemprop="url">http协议和Chrome抓包工具</a></h1>
+                <a class="post-title-link" href="/z_post/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" itemprop="url">http协议和Chrome抓包工具</a></h1>
         
 
         <div class="post-meta">
@@ -822,7 +818,7 @@
           <h1 id="2-http协议和Chrome抓包工具"><a href="#2-http协议和Chrome抓包工具" class="headerlink" title="2-http协议和Chrome抓包工具"></a>2-http协议和Chrome抓包工具</h1><h2 id="什么是http和https协议："><a href="#什么是http和https协议：" class="headerlink" title="什么是http和https协议："></a>什么是http和https协议：</h2><p>HTTP协议：全称是<code>HyperText Transfer Protocol</code>，中文意思是超文本传输协议，是一种发布和接收HTML页面的方法。服务器端口号是<code>80</code>端口。 HTTPS协议：是HTTP协议的加密版本，在HTTP下加入了SSL层。服务器端口号是<code>443</code>端口。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/19/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/#more" rel="contents">
+            <a class="btn" href="/z_post/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -880,7 +876,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/27/c-stl%E5%9F%BA%E7%A1%80/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/c-stl%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -899,7 +895,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/27/c-stl%E5%9F%BA%E7%A1%80/" itemprop="url">c++ stl基础</a></h1>
+                <a class="post-title-link" href="/z_post/c-stl%E5%9F%BA%E7%A1%80/" itemprop="url">c++ stl基础</a></h1>
         
 
         <div class="post-meta">
@@ -984,7 +980,7 @@
           <p>c++ 容器</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/27/c-stl%E5%9F%BA%E7%A1%80/#more" rel="contents">
+            <a class="btn" href="/z_post/c-stl%E5%9F%BA%E7%A1%80/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1042,7 +1038,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/15/python%E7%88%AC%E8%99%AB%E7%BB%AD/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1061,7 +1057,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/15/python%E7%88%AC%E8%99%AB%E7%BB%AD/" itemprop="url">python爬虫续</a></h1>
+                <a class="post-title-link" href="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/" itemprop="url">python爬虫续</a></h1>
         
 
         <div class="post-meta">
@@ -1169,7 +1165,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process_request(spider,request)</span><br><span class="line">process_response()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/15/python%E7%88%AC%E8%99%AB%E7%BB%AD/#more" rel="contents">
+            <a class="btn" href="/z_post/python%E7%88%AC%E8%99%AB%E7%BB%AD/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1227,7 +1223,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/15/c%E8%AF%AD%E8%A8%80%E5%88%B0c++/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/c%E8%AF%AD%E8%A8%80%E5%88%B0cplus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1246,7 +1242,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/15/c%E8%AF%AD%E8%A8%80%E5%88%B0c++/" itemprop="url">c语言</a></h1>
+                <a class="post-title-link" href="/z_post/c%E8%AF%AD%E8%A8%80%E5%88%B0cplus/" itemprop="url">c语言</a></h1>
         
 
         <div class="post-meta">
@@ -1353,7 +1349,7 @@
           <p>C语言用三种方式打印数组</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/15/c%E8%AF%AD%E8%A8%80%E5%88%B0c++/#more" rel="contents">
+            <a class="btn" href="/z_post/c%E8%AF%AD%E8%A8%80%E5%88%B0cplus/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1411,7 +1407,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/08/mysql1/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/mysql1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1430,7 +1426,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/08/mysql1/" itemprop="url">mysql查询2</a></h1>
+                <a class="post-title-link" href="/z_post/mysql1/" itemprop="url">mysql查询2</a></h1>
         
 
         <div class="post-meta">
@@ -1538,7 +1534,7 @@
 <p>通过多个表,然后用log记录的方式记录知识:</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/08/mysql1/#more" rel="contents">
+            <a class="btn" href="/z_post/mysql1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1596,7 +1592,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/24/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1615,7 +1611,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/24/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/" itemprop="url">xpath语法与lxml库</a></h1>
+                <a class="post-title-link" href="/z_post/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/" itemprop="url">xpath语法与lxml库</a></h1>
         
 
         <div class="post-meta">
@@ -1722,7 +1718,7 @@
           <h1 id="xpath语法与lxml库"><a href="#xpath语法与lxml库" class="headerlink" title="xpath语法与lxml库"></a>xpath语法与lxml库</h1><h2 id="什么是XPath？"><a href="#什么是XPath？" class="headerlink" title="什么是XPath？"></a>什么是XPath？</h2><p>xpath（XML Path Language）是一门在XML和HTML文档中查找信息的语言，可用来在XML和HTML文档中对元素和属性进行遍历。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/24/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/z_post/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1780,7 +1776,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/15/python%E7%88%AC%E8%99%AB/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/python%E7%88%AC%E8%99%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1799,7 +1795,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/15/python%E7%88%AC%E8%99%AB/" itemprop="url">python爬虫</a></h1>
+                <a class="post-title-link" href="/z_post/python%E7%88%AC%E8%99%AB/" itemprop="url">python爬虫</a></h1>
         
 
         <div class="post-meta">
@@ -1911,7 +1907,7 @@
 <p>例: </p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/15/python%E7%88%AC%E8%99%AB/#more" rel="contents">
+            <a class="btn" href="/z_post/python%E7%88%AC%E8%99%AB/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1969,7 +1965,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/13/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/z_post/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1988,7 +1984,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/13/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/" itemprop="url">爬虫前奏</a></h1>
+                <a class="post-title-link" href="/z_post/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/" itemprop="url">爬虫前奏</a></h1>
         
 
         <div class="post-meta">
@@ -2096,7 +2092,7 @@
 <li><p>搜索引擎（百度、谷歌、360搜索等）。</p></li></ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/13/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/#more" rel="contents">
+            <a class="btn" href="/z_post/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2287,14 +2283,27 @@
   <span class="author" itemprop="copyrightHolder">philxling</span>
 
   
+
 </div>
-<div class="powered-by">
+
+<!--<div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
   本站访客数:<span id="busuanzi_value_site_uv"></span>
 </span>
-</div>
+</div>-->
 
+
+
+
+
+
+
+
+
+
+<!--
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
 
 
 
@@ -2303,25 +2312,62 @@
 
 
   <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+-->
 
 
-
+<!--
 <div class="theme-info">
   <div class="powered-by"></div>
   <span class="post-count">博客全站共71k字</span>
+</div>-->
+
+
+
+<!-- 新增访客统计代码-->
+<div class="busuanzi-count">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户:<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数:<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共:<span class="post-count">71k</span>字
+    </span>
 </div>
+
+
+<!-- 在网页底部添加网站运行时间 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/23/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Run for "+dnum+" Days ";
+        document.getElementById("times").innerHTML = hnum + " Hours " + mnum + " m " + snum + " s";
+    }
+setInterval("createtime()",250);
+</script>
+
 
         
 <div class="busuanzi-count">
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
-
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </div>
-
 
 
 
@@ -2788,19 +2834,6 @@
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
