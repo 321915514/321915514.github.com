@@ -136,6 +136,34 @@
   </entry>
   
   <entry>
+    <title>mysql服务消失问题</title>
+    <link href="http://philxling.cn/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/"/>
+    <id>http://philxling.cn/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/</id>
+    <published>2020-04-04T18:42:00.000Z</published>
+    <updated>2020-04-04T19:09:08.896Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h2 id="mysql服务消失问题"><a href="#mysql服务消失问题" class="headerlink" title="mysql服务消失问题"></a>mysql服务消失问题</h2><p>今天想着从数据库复制一篇文章,然后命令行连接报错,我一看服务消失,应该是装多个没改端口造成的,直接卸载重装</p><h4 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1 官网下载"></a>1 官网下载</h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dev.mysql.com/downloads/file/?id=492456</span><br></pre></td></tr></tbody></table></figure><p>然后本地卸载mysql后会保留data目录,</p><h4 id="2-卸载本地mysql-保留data目录"><a href="#2-卸载本地mysql-保留data目录" class="headerlink" title="2 卸载本地mysql,保留data目录"></a>2 卸载本地mysql,保留data目录</h4><h4 id="3-将data目录复制到新的data目录中"><a href="#3-将data目录复制到新的data目录中" class="headerlink" title="3 将data目录复制到新的data目录中"></a>3 将data目录复制到新的data目录中</h4><p>注意覆盖文件,(应该新旧mysql版本要一致)mysql5.7的数据库文件都是opt类型,mysql8.0是ibd类型</p><h4 id="4-重启mysql服务"><a href="#4-重启mysql服务" class="headerlink" title="4 重启mysql服务"></a>4 重启mysql服务</h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></tbody></table></figure><p>或者到服务中启动(运行<code>service.msc</code>)</p><p>有可能会报错</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">某些服务在未由其他服务或程序使用时将自动停止</span><br></pre></td></tr></tbody></table></figure><p>这是配置文件有问题,或者data目录文件有错,我是data目录下还有Data目录,将里面的数据库文件复制到data层然后删除Data</p><p>重启服务解决.而且数据没有丢失.</p><p>mysql8.0的data目录在这个文件下</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\MySQL\MySQL Server 8.0\Data</span><br></pre></td></tr></tbody></table></figure><p>安装目录</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\MySQL\MySQL Server 8.0</span><br></pre></td></tr></tbody></table></figure><p><img src="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/image-20200405030817266.png" alt="image-20200405030817266"></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;mysql服务消失问题&quot;&gt;&lt;a href=&quot;#mysql服务消失问题&quot; class=&quot;headerlink&quot; title=&quot;mysql服务消失问题&quot;&gt;&lt;/a&gt;mysql服务消失问题&lt;/h2&gt;&lt;p&gt;今天想着从数据库复
+      
+    
+    </summary>
+    
+    
+      <category term="problem" scheme="http://philxling.cn/categories/problem/"/>
+    
+    
+      <category term="problem" scheme="http://philxling.cn/tags/problem/"/>
+    
+      <category term="mysql" scheme="http://philxling.cn/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>c语言指针</title>
     <link href="http://philxling.cn/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/"/>
     <id>http://philxling.cn/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/</id>

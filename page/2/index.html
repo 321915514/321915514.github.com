@@ -705,6 +705,217 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/" itemprop="url">mysql服务消失问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-05T02:42:00+08:00">
+                2020-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/problem/" itemprop="url" rel="index">
+                    <span itemprop="name">problem</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  278字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="mysql服务消失问题"><a href="#mysql服务消失问题" class="headerlink" title="mysql服务消失问题"></a>mysql服务消失问题</h2><p>今天想着从数据库复制一篇文章,然后命令行连接报错,我一看服务消失,应该是装多个没改端口造成的,直接卸载重装</p>
+<h4 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1 官网下载"></a>1 官网下载</h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dev.mysql.com/downloads/file/?id=492456</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后本地卸载mysql后会保留data目录,</p>
+<h4 id="2-卸载本地mysql-保留data目录"><a href="#2-卸载本地mysql-保留data目录" class="headerlink" title="2 卸载本地mysql,保留data目录"></a>2 卸载本地mysql,保留data目录</h4><h4 id="3-将data目录复制到新的data目录中"><a href="#3-将data目录复制到新的data目录中" class="headerlink" title="3 将data目录复制到新的data目录中"></a>3 将data目录复制到新的data目录中</h4><p>注意覆盖文件,(应该新旧mysql版本要一致)mysql5.7的数据库文件都是opt类型,mysql8.0是ibd类型</p>
+<h4 id="4-重启mysql服务"><a href="#4-重启mysql服务" class="headerlink" title="4 重启mysql服务"></a>4 重启mysql服务</h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者到服务中启动(运行<code>service.msc</code>)</p>
+<p>有可能会报错</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">某些服务在未由其他服务或程序使用时将自动停止</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这是配置文件有问题,或者data目录文件有错,我是data目录下还有Data目录,将里面的数据库文件复制到data层然后删除Data</p>
+<p>重启服务解决.而且数据没有丢失.</p>
+<p>mysql8.0的data目录在这个文件下</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\MySQL\MySQL Server 8.0\Data</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装目录</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\MySQL\MySQL Server 8.0</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><img src="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/image-20200405030817266.png" alt="image-20200405030817266"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    <div>
+    	
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2136,7 +2347,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2232,7 +2443,7 @@
   <span class="author" itemprop="copyrightHolder">philxling</span>
 	<div class="theme-info">
 	  <div class="powered-by"></div>
-	  <span class="post-count"><i class="fa fa-area-chart"> 博客全站共</i>56.8k字</span>
+	  <span class="post-count"><i class="fa fa-area-chart"> 博客全站共</i>57.1k字</span>
 	</div>
   
 </div>
