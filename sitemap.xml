@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://philxling.cn/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
+    
+    <lastmod>2020-04-06T12:24:27.619Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.cn/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/</loc>
+    
+    <lastmod>2020-04-06T12:21:53.866Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://philxling.cn/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-04-04T19:09:08.896Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://philxling.cn/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/</loc>
     
     <lastmod>2020-04-03T21:58:32.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://philxling.cn/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/</loc>
-    
-    <lastmod>2020-04-03T17:12:42.804Z</lastmod>
     
   </url>
   
