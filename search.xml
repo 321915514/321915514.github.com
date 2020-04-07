@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MySQL数据库</title>
+    <url>/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h1><h2 id="安装mysql："><a href="#安装mysql：" class="headerlink" title="安装mysql："></a>安装mysql：</h2><ol>
+<li>在官网：<a href="https://dev.mysql.com/downloads/windows/installer/5.7.html" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/5.7.html</a></li>
+<li>如果提示没有<code>.NET Framework</code>框架。那么就在提示框中找到下载链接，下载一个就可以了。</li>
+<li>如果提示没有<code>Microsoft Virtual C++ x64(x86)</code>，那么百度或者谷歌这个软件安装即可。</li>
+</ol>
+<a id="more"></a>
+
+<p>​    4. 如果没有找到。那么私聊我。</p>
+<h2 id="navicat："><a href="#navicat：" class="headerlink" title="navicat："></a>navicat：</h2><p>navicat是一个操作mysql数据库非常方便的软件。使用他操作数据库，就跟使用excel操作数据是一样的。</p>
+<h2 id="安装驱动程序："><a href="#安装驱动程序：" class="headerlink" title="安装驱动程序："></a>安装驱动程序：</h2><p>Python要想操作MySQL。必须要有一个中间件，或者叫做驱动程序。驱动程序有很多。比如有<code>mysqldb</code>、<code>mysqlclient</code>、<code>pymysql</code>等。在这里，我们选择用<code>pymysql</code>。安装方式也是非常简单，通过命令<code>pip install pymysql</code>即可安装。</p>
+<h2 id="数据库连接："><a href="#数据库连接：" class="headerlink" title="数据库连接："></a>数据库连接：</h2><p>数据库连接之前。首先先确认以下工作完成，这里我们以一个<code>pymysql_test</code>数据库.以下将介绍连接<code>mysql</code>的示例代码：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    user=<span class="string">'root'</span>,</span><br><span class="line">    password=<span class="string">'root'</span>,</span><br><span class="line">    database=<span class="string">'pymysql_test'</span>,</span><br><span class="line">    port=<span class="number">3306</span></span><br><span class="line">)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line">cursor.execute(<span class="string">"select 1"</span>)</span><br><span class="line">data = cursor.fetchone()</span><br><span class="line">print(data)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h2><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    user=<span class="string">'root'</span>,</span><br><span class="line">    password=<span class="string">'root'</span>,</span><br><span class="line">    database=<span class="string">'pymysql_test'</span>,</span><br><span class="line">    port=<span class="number">3306</span></span><br><span class="line">)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">insert into user(</span></span><br><span class="line"><span class="string">    id,username,gender,age,password</span></span><br><span class="line"><span class="string">  ) </span></span><br><span class="line"><span class="string">  values(null,'abc',1,18,'111111');</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果在数据还不能保证的情况下，可以使用以下方式来插入数据：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">insert into user(</span></span><br><span class="line"><span class="string">    id,username,gender,age,password</span></span><br><span class="line"><span class="string">  ) </span></span><br><span class="line"><span class="string">  values(null,%s,%s,%s,%s);</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql,(<span class="string">'spider'</span>,<span class="number">1</span>,<span class="number">20</span>,<span class="string">'222222'</span>))</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="查找数据："><a href="#查找数据：" class="headerlink" title="查找数据："></a>查找数据：</h2><p>使用<code>pymysql</code>查询数据。可以使用<code>fetch*</code>方法。</p>
+<ol>
+<li><code>fetchone()</code>：这个方法每次之获取一条数据。</li>
+<li><code>fetchall()</code>：这个方法接收全部的返回结果。</li>
+<li><code>fetchmany(size)</code>：可以获取指定条数的数据。<br>示例代码如下：</li>
+</ol>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    result = cursor.fetchone()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> result:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者是直接使用<code>fetchall</code>，一次性可以把所有满足条件的数据都取出来：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<p>或者是使用<code>fetchmany</code>，指定获取多少条数据：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">results = cursor.fetchmany(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="删除数据："><a href="#删除数据：" class="headerlink" title="删除数据："></a>删除数据：</h2><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">delete from user where id=1</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="更新数据："><a href="#更新数据：" class="headerlink" title="更新数据："></a>更新数据：</h2><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>,password=<span class="string">'root'</span>,database=<span class="string">'pymysql_demo'</span>,port=<span class="number">3306</span>)</span><br><span class="line">cursor = conn.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">update user set username='aaa' where id=1</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+      <categories>
+        <category>python爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>excel文件处理</title>
     <url>/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<html><head></head><body><h1 id="excel文件处理"><a href="#excel文件处理" class="headerlink" title="excel文件处理"></a>excel文件处理</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ol>
