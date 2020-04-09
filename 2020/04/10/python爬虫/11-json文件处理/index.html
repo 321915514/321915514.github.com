@@ -96,15 +96,15 @@
 
 
 
-<meta name="description" content="4-requests库虽然Python的标准库中 urllib模块已经包含了平常我们使用的大多数功能，但是它的 API 使用起来让人感觉不太好，而 Requests宣传是 “HTTP for Humans”，说明使用更简洁方便。">
+<meta name="description" content="json文件处理什么是json：JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。它基于 ECMAScript (w3c制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。更多解释">
 <meta property="og:type" content="article">
-<meta property="og:title" content="requests库">
-<meta property="og:url" content="http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/index.html">
+<meta property="og:title" content="json文件处理">
+<meta property="og:url" content="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="philxling">
-<meta property="og:description" content="4-requests库虽然Python的标准库中 urllib模块已经包含了平常我们使用的大多数功能，但是它的 API 使用起来让人感觉不太好，而 Requests宣传是 “HTTP for Humans”，说明使用更简洁方便。">
+<meta property="og:description" content="json文件处理什么是json：JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。它基于 ECMAScript (w3c制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。更多解释">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-21T06:45:23.000Z">
-<meta property="article:modified_time" content="2020-04-02T15:13:04.657Z">
+<meta property="article:published_time" content="2020-04-09T19:00:12.000Z">
+<meta property="article:modified_time" content="2020-04-09T18:59:35.033Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="python爬虫">
 <meta property="article:tag" content="python">
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://philxling.cn/2020/03/21/python爬虫/4-requests库/">
+  <link rel="canonical" href="http://philxling.cn/2020/04/10/python爬虫/11-json文件处理/">
 
 
 
 
 
-  <title>requests库 | philxling</title>
+  <title>json文件处理 | philxling</title>
   
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">requests库</h1>
+          <h1 class="post-title" itemprop="name headline">json文件处理</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-21T14:45:23+08:00">
-                2020-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-10T03:00:12+08:00">
+                2020-04-10
               </time>
             
 
@@ -385,8 +385,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/" itemprop="commentCount"></span>
+                <a href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">Words count in article:</span>
                 
                 <span title="Words count in article">
-                  923字
+                  489字
                 </span>
               
 
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  4分钟
+                  1分钟
                 </span>
               
             </div>
@@ -450,42 +450,25 @@
       
 
       
-        <h1 id="4-requests库"><a href="#4-requests库" class="headerlink" title="4-requests库"></a>4-requests库</h1><p>虽然Python的标准库中 urllib模块已经包含了平常我们使用的大多数功能，但是它的 API 使用起来让人感觉不太好，而 Requests宣传是 “HTTP for Humans”，说明使用更简洁方便。</p>
+        <h1 id="json文件处理"><a href="#json文件处理" class="headerlink" title="json文件处理"></a>json文件处理</h1><h2 id="什么是json："><a href="#什么是json：" class="headerlink" title="什么是json："></a>什么是json：</h2><p>JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。它基于 ECMAScript (w3c制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。更多解释请见：<a href="https://baike.baidu.com/item/JSON/2462549?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/JSON/2462549?fr=aladdin</a></p>
 <a id="more"></a>
 
-<h2 id="安装和文档地址："><a href="#安装和文档地址：" class="headerlink" title="安装和文档地址："></a>安装和文档地址：</h2><p>利用<code>pip</code>可以非常方便的安装：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></tbody></table></figure>
-
-<p>中文文档：<a href="http://docs.python-requests.org/zh_CN/latest/index.html" target="_blank" rel="noopener">http://docs.python-requests.org/zh_CN/latest/index.html</a><br>github地址：<a href="https://github.com/requests/requests" target="_blank" rel="noopener">https://github.com/requests/requests</a></p>
-<h2 id="发送GET请求："><a href="#发送GET请求：" class="headerlink" title="发送GET请求："></a>发送GET请求：</h2><ol>
-<li><p>最简单的发送<code>get</code>请求就是通过<code>requests.get</code>来调用：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(<span class="string">"http://www.baidu.com/"</span>)</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>添加headers和查询参数：<br>如果想添加 headers，可以传入headers参数来增加请求头中的headers信息。如果要将参数放在url中传递，可以利用 params 参数。相关示例代码如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">   </span><br><span class="line">kw = {<span class="string">'wd'</span>:<span class="string">'中国'</span>}</span><br><span class="line">   </span><br><span class="line">headers = {<span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"</span>}</span><br><span class="line">   </span><br><span class="line"><span class="comment"># params 接收一个字典或者字符串的查询参数，字典类型自动转换为url编码，不需要urlencode()</span></span><br><span class="line">response = requests.get(<span class="string">"http://www.baidu.com/s"</span>, params = kw, headers = headers)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 查看响应内容，response.text 返回的是Unicode格式的数据</span></span><br><span class="line">print(response.text)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 查看响应内容，response.content返回的字节流数据</span></span><br><span class="line">print(response.content)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 查看完整url地址</span></span><br><span class="line">print(response.url)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 查看响应头部字符编码</span></span><br><span class="line">print(response.encoding)</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 查看响应码</span></span><br><span class="line">print(response.status_code)</span><br></pre></td></tr></tbody></table></figure>
-
-</li>
+<h2 id="JSON支持数据格式："><a href="#JSON支持数据格式：" class="headerlink" title="JSON支持数据格式："></a>JSON支持数据格式：</h2><ol>
+<li>对象（字典）。使用花括号。</li>
+<li>数组（列表）。使用方括号。</li>
+<li>整形、浮点型、布尔类型还有null类型。</li>
+<li>字符串类型（字符串必须要用双引号，不能用单引号）。</li>
 </ol>
-<h2 id="发送POST请求："><a href="#发送POST请求：" class="headerlink" title="发送POST请求："></a>发送POST请求：</h2><ol>
-<li><p>最基本的POST请求可以使用<code>post</code>方法：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.post(<span class="string">"http://www.baidu.com/"</span>,data=data)</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>传入data数据：<br>这时候就不要再使用<code>urlencode</code>进行编码了，直接传入一个字典进去就可以了。比如请求拉勾网的数据的代码：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">   </span><br><span class="line">url = <span class="string">"https://www.lagou.com/jobs/positionAjax.json?city=%E6%B7%B1%E5%9C%B3&needAddtionalResult=false&isSchoolJob=0"</span></span><br><span class="line">   </span><br><span class="line">headers = {</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'</span>,</span><br><span class="line">    <span class="string">'Referer'</span>: <span class="string">'https://www.lagou.com/jobs/list_python?labelWords=&fromSearch=true&suginput='</span></span><br><span class="line">}</span><br><span class="line">   </span><br><span class="line">data = {</span><br><span class="line">    <span class="string">'first'</span>: <span class="string">'true'</span>,</span><br><span class="line">    <span class="string">'pn'</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">'kd'</span>: <span class="string">'python'</span></span><br><span class="line">}</span><br><span class="line">   </span><br><span class="line">resp = requests.post(url,headers=headers,data=data)</span><br><span class="line"><span class="comment"># 如果是json数据，直接可以调用json方法</span></span><br><span class="line">print(resp.json())</span><br></pre></td></tr></tbody></table></figure>
+<p>多个数据之间使用逗号分开。<br><strong>注意：json本质上就是一个字符串。</strong></p>
+<h2 id="字典和列表转JSON："><a href="#字典和列表转JSON：" class="headerlink" title="字典和列表转JSON："></a>字典和列表转JSON：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">books = [</span><br><span class="line">    {</span><br><span class="line">        <span class="string">'title'</span>: <span class="string">'钢铁是怎样练成的'</span>,</span><br><span class="line">        <span class="string">'price'</span>: <span class="number">9.8</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">        <span class="string">'title'</span>: <span class="string">'红楼梦'</span>,</span><br><span class="line">        <span class="string">'price'</span>: <span class="number">9.9</span></span><br><span class="line">    }</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">json_str = json.dumps(books,ensure_ascii=<span class="literal">False</span>)</span><br><span class="line">print(json_str)</span><br></pre></td></tr></tbody></table></figure>
 
-</li>
-</ol>
-<h2 id="使用代理："><a href="#使用代理：" class="headerlink" title="使用代理："></a>使用代理：</h2><p>使用<code>requests</code>添加代理也非常简单，只要在请求的方法中（比如<code>get</code>或者<code>post</code>）传递<code>proxies</code>参数就可以了。示例代码如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">"http://httpbin.org/get"</span></span><br><span class="line"></span><br><span class="line">headers = {</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'</span>,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">proxy = {</span><br><span class="line">    <span class="string">'http'</span>: <span class="string">'171.14.209.180:27829'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">resp = requests.get(url,headers=headers,proxies=proxy)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'xx.html'</span>,<span class="string">'w'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    fp.write(resp.text)</span><br></pre></td></tr></tbody></table></figure>
+<p>因为<code>json</code>在<code>dump</code>的时候，只能存放<code>ascii</code>的字符，因此会将中文进行转义，这时候我们可以使用<code>ensure_ascii=False</code>关闭这个特性。<br>在<code>Python</code>中。只有基本数据类型才能转换成<code>JSON</code>格式的字符串。也即：<code>int</code>、<code>float</code>、<code>str</code>、<code>list</code>、<code>dict</code>、<code>tuple</code>。</p>
+<h3 id="将json数据直接dump到文件中："><a href="#将json数据直接dump到文件中：" class="headerlink" title="将json数据直接dump到文件中："></a>将json数据直接<code>dump</code>到文件中：</h3><p><code>json</code>模块中除了<code>dumps</code>函数，还有一个<code>dump</code>函数，这个函数可以传入一个文件指针，直接将字符串<code>dump</code>到文件中。示例代码如下：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">books = [</span><br><span class="line">    {</span><br><span class="line">        <span class="string">'title'</span>: <span class="string">'钢铁是怎样练成的'</span>,</span><br><span class="line">        <span class="string">'price'</span>: <span class="number">9.8</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">        <span class="string">'title'</span>: <span class="string">'红楼梦'</span>,</span><br><span class="line">        <span class="string">'price'</span>: <span class="number">9.9</span></span><br><span class="line">    }</span><br><span class="line">]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'a.json'</span>,<span class="string">'w'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    json.dump(books,fp)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="cookie："><a href="#cookie：" class="headerlink" title="cookie："></a>cookie：</h2><p>如果在一个响应中包含了<code>cookie</code>，那么可以利用<code>cookies</code>属性拿到这个返回的<code>cookie</code>值：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">"http://www.renren.com/PLogin.do"</span></span><br><span class="line">data = {<span class="string">"email"</span>:<span class="string">"970138074@qq.com"</span>,<span class="string">'password'</span>:<span class="string">"pythonspider"</span>}</span><br><span class="line">resp = requests.get(<span class="string">'http://www.baidu.com/'</span>)</span><br><span class="line">print(resp.cookies)</span><br><span class="line">print(resp.cookies.get_dict())</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="将一个json字符串load成Python对象："><a href="#将一个json字符串load成Python对象：" class="headerlink" title="将一个json字符串load成Python对象："></a>将一个json字符串load成Python对象：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">json_str = <span class="string">'[{"title": "钢铁是怎样练成的", "price": 9.8}, {"title": "红楼梦", "price": 9.9}]'</span></span><br><span class="line">books = json.loads(json_str,encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">print(type(books))</span><br><span class="line">print(books)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="session："><a href="#session：" class="headerlink" title="session："></a>session：</h2><p>之前使用<code>urllib</code>库，是可以使用<code>opener</code>发送多个请求，多个请求之间是可以共享<code>cookie</code>的。那么如果使用<code>requests</code>，也要达到共享<code>cookie</code>的目的，那么可以使用<code>requests</code>库给我们提供的<code>session</code>对象。注意，这里的<code>session</code>不是web开发中的那个session，这个地方只是一个会话的对象而已。还是以登录人人网为例，使用<code>requests</code>来实现。示例代码如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">"http://www.renren.com/PLogin.do"</span></span><br><span class="line">data = {<span class="string">"email"</span>:<span class="string">"970138074@qq.com"</span>,<span class="string">'password'</span>:<span class="string">"pythonspider"</span>}</span><br><span class="line">headers = {</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录</span></span><br><span class="line">session = requests.session()</span><br><span class="line">session.post(url,data=data,headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问大鹏个人中心</span></span><br><span class="line">resp = session.get(<span class="string">'http://www.renren.com/880151247/profile'</span>)</span><br><span class="line"></span><br><span class="line">print(resp.text)</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="处理不信任的SSL证书："><a href="#处理不信任的SSL证书：" class="headerlink" title="处理不信任的SSL证书："></a>处理不信任的SSL证书：</h2><p>对于那些已经被信任的SSL整数的网站，比如<code>https://www.baidu.com/</code>，那么使用<code>requests</code>直接就可以正常的返回响应。示例代码如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resp = requests.get(<span class="string">'http://www.12306.cn/mormhweb/'</span>,verify=<span class="literal">False</span>)</span><br><span class="line">print(resp.content.decode())</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="直接从文件中读取json："><a href="#直接从文件中读取json：" class="headerlink" title="直接从文件中读取json："></a>直接从文件中读取json：</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'a.json'</span>,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    json_str = json.load(fp)</span><br><span class="line">    print(json_str)</span><br></pre></td></tr></tbody></table></figure>
       
     </div>
     
@@ -494,6 +477,35 @@
 <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">json文件处理</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 philxling 的个人博客">philxling</a></p>
+  <p><span>发布时间:</span>2020年04月10日 - 03:00</p>
+  <p><span>最后更新:</span>2020年04月10日 - 02:59</p>
+  <p><span>原始链接:</span><a href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="json文件处理">http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
 
       
 </div>
@@ -559,7 +571,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/" title="requests库">http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/</a>
+    <a href="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="json文件处理">http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -608,8 +620,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/" rel="next" title="urllib库">
-                <i class="fa fa-chevron-left"></i> urllib库
+              <a href="/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="next" title="MongoDB数据库">
+                <i class="fa fa-chevron-left"></i> MongoDB数据库
               </a>
             
           </div>
@@ -618,8 +630,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/24/python%E7%88%AC%E8%99%AB/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/" rel="prev" title="xpath语法与lxml库">
-                xpath语法与lxml库 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/" rel="prev" title="继承和多态">
+                继承和多态 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -784,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#4-requests库"><span class="nav-number">1.</span> <span class="nav-text">4-requests库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装和文档地址："><span class="nav-number">1.1.</span> <span class="nav-text">安装和文档地址：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送GET请求："><span class="nav-number">1.2.</span> <span class="nav-text">发送GET请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送POST请求："><span class="nav-number">1.3.</span> <span class="nav-text">发送POST请求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用代理："><span class="nav-number">1.4.</span> <span class="nav-text">使用代理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie："><span class="nav-number">1.5.</span> <span class="nav-text">cookie：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#session："><span class="nav-number">1.6.</span> <span class="nav-text">session：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理不信任的SSL证书："><span class="nav-number">1.7.</span> <span class="nav-text">处理不信任的SSL证书：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#json文件处理"><span class="nav-number">1.</span> <span class="nav-text">json文件处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是json："><span class="nav-number">1.1.</span> <span class="nav-text">什么是json：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON支持数据格式："><span class="nav-number">1.2.</span> <span class="nav-text">JSON支持数据格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典和列表转JSON："><span class="nav-number">1.3.</span> <span class="nav-text">字典和列表转JSON：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将json数据直接dump到文件中："><span class="nav-number">1.3.1.</span> <span class="nav-text">将json数据直接dump到文件中：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将一个json字符串load成Python对象："><span class="nav-number">1.4.</span> <span class="nav-text">将一个json字符串load成Python对象：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接从文件中读取json："><span class="nav-number">1.4.1.</span> <span class="nav-text">直接从文件中读取json：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
