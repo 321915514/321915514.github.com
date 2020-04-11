@@ -96,15 +96,15 @@
 
 
 
-<meta name="description" content="csv文件处理读取csv文件：1234567import csvwith open('stock.csv','r') as fp:    reader = csv.reader(fp)    titles = next(reader)    for x in reader:        print(x)  这样操作，以后获取数据的时候，就要通过下表来获取数据。如果想要在获取数据的时候通过标题来获">
+<meta name="description" content="csv文件处理读取csv文件：1234567import csvwith open('stock.csv','r') as fp:    reader = csv.reader(fp)    titles = next(reader)    for x in reader:        print(x)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="csv文件处理">
 <meta property="og:url" content="http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="philxling">
-<meta property="og:description" content="csv文件处理读取csv文件：1234567import csvwith open('stock.csv','r') as fp:    reader = csv.reader(fp)    titles = next(reader)    for x in reader:        print(x)  这样操作，以后获取数据的时候，就要通过下表来获取数据。如果想要在获取数据的时候通过标题来获">
+<meta property="og:description" content="csv文件处理读取csv文件：1234567import csvwith open('stock.csv','r') as fp:    reader = csv.reader(fp)    titles = next(reader)    for x in reader:        print(x)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-11T15:40:12.000Z">
-<meta property="article:modified_time" content="2020-04-11T15:45:43.577Z">
+<meta property="article:modified_time" content="2020-04-11T16:02:50.040Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="python爬虫">
 <meta property="article:tag" content="python">
@@ -452,6 +452,8 @@
       
         <h1 id="csv文件处理"><a href="#csv文件处理" class="headerlink" title="csv文件处理"></a>csv文件处理</h1><h2 id="读取csv文件："><a href="#读取csv文件：" class="headerlink" title="读取csv文件："></a>读取csv文件：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'stock.csv'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    reader = csv.reader(fp)</span><br><span class="line">    titles = next(reader)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> reader:</span><br><span class="line">        print(x)</span><br></pre></td></tr></tbody></table></figure>
 
+<a id="more"></a>
+
 <p>这样操作，以后获取数据的时候，就要通过下表来获取数据。如果想要在获取数据的时候通过标题来获取。那么可以使用<code>DictReader</code>。示例代码如下：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'stock.csv'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    reader = csv.DictReader(fp)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> reader:</span><br><span class="line">        print(x[<span class="string">'turnoverVol'</span>])</span><br></pre></td></tr></tbody></table></figure>
 
@@ -477,7 +479,7 @@
   <p><span>本文标题:</span><a href="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">csv文件处理</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 philxling 的个人博客">philxling</a></p>
   <p><span>发布时间:</span>2020年04月11日 - 23:40</p>
-  <p><span>最后更新:</span>2020年04月11日 - 23:45</p>
+  <p><span>最后更新:</span>2020年04月12日 - 00:02</p>
   <p><span>原始链接:</span><a href="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" title="csv文件处理">http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" aria-label="复制成功！"></i></span>
   </p>
