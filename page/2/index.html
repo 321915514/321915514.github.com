@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -335,7 +335,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/" itemprop="url">BeautifulSoup4库</a></h1>
+                <a class="post-title-link" href="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="url">csv文件处理</a></h1>
         
 
         <div class="post-meta">
@@ -347,8 +347,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">
-                2020-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-11T23:40:12+08:00">
+                2020-04-11
               </time>
             
 
@@ -388,8 +388,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/" itemprop="commentCount"></span>
+                <a href="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">Words count in article:</span>
                 
                 <span title="Words count in article">
-                  1.8k字
+                  277字
                 </span>
               
 
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  7分钟
+                  1分钟
                 </span>
               
             </div>
@@ -449,10 +449,10 @@
 
       
         
-          <h1 id="BeautifulSoup4库"><a href="#BeautifulSoup4库" class="headerlink" title="BeautifulSoup4库"></a>BeautifulSoup4库</h1><p>和 lxml 一样，Beautiful Soup 也是一个HTML/XML的解析器，主要的功能也是如何解析和提取 HTML/XML 数据。<br>lxml 只会局部遍历，而Beautiful Soup 是基于HTML DOM（Document Object Model）的，会载入整个文档，解析整个DOM树，因此时间和内存开销都会大很多，所以性能要低于lxml。<br>BeautifulSoup 用来解析 HTML 比较简单，API非常人性化，支持CSS选择器、Python标准库中的HTML解析器，也支持 lxml 的 XML解析器。<br>Beautiful Soup 3 目前已经停止开发，推荐现在的项目使用Beautiful Soup 4。</p>
+          <h1 id="csv文件处理"><a href="#csv文件处理" class="headerlink" title="csv文件处理"></a>csv文件处理</h1><h2 id="读取csv文件："><a href="#读取csv文件：" class="headerlink" title="读取csv文件："></a>读取csv文件：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'stock.csv'</span>,<span class="string">'r'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    reader = csv.reader(fp)</span><br><span class="line">    titles = next(reader)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> reader:</span><br><span class="line">        print(x)</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/04/04/python%E7%88%AC%E8%99%AB/7-BeautifulSoup4%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#more" rel="contents">
               Read more »
             </a>
           </div>
@@ -510,7 +510,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -529,7 +529,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/" itemprop="url">正则表达式和re模块</a></h1>
+                <a class="post-title-link" href="/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/" itemprop="url">继承和多态</a></h1>
         
 
         <div class="post-meta">
@@ -541,8 +541,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-24T13:56:23+08:00">
-                2020-03-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-10T23:15:56+08:00">
+                2020-04-10
               </time>
             
 
@@ -564,8 +564,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">python爬虫</span>
+                  <a href="/categories/c/" itemprop="url" rel="index">
+                    <span itemprop="name">c++</span>
                   </a>
                 </span>
 
@@ -582,8 +582,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/" itemprop="commentCount"></span>
+                <a href="/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -605,7 +605,7 @@
                   <span class="post-meta-item-text">Words count in article:</span>
                 
                 <span title="Words count in article">
-                  2.6k字
+                  61字
                 </span>
               
 
@@ -621,7 +621,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  11分钟
+                  1分钟
                 </span>
               
             </div>
@@ -643,11 +643,11 @@
 
       
         
-          <h1 id="3-正则表达式和re模块"><a href="#3-正则表达式和re模块" class="headerlink" title="3-正则表达式和re模块"></a>3-正则表达式和re模块</h1><h2 id="什么是正则表达式："><a href="#什么是正则表达式：" class="headerlink" title="什么是正则表达式："></a>什么是正则表达式：</h2><p>通俗理解：按照一定的规则，从某个字符串中匹配出想要的数据。这个规则就是正则表达式。<br>标准答案：<a href="https://baike.baidu.com/item/正则表达式/1700215?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/正则表达式/1700215?fr=aladdin</a></p>
-<h2 id="一个段子："><a href="#一个段子：" class="headerlink" title="一个段子："></a>一个段子：</h2><p>世界是分为两种人，一种是懂正则表达式的，一种是不懂正则表达式的.</p>
+          <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承的构造和析构的循序:先父类再子类,然后子类析构父类析构</p>
+<p>访问同名的成员变量需要加作用域其为:</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/#more" rel="contents">
+            <a class="btn" href="/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/#more" rel="contents">
               Read more »
             </a>
           </div>
@@ -705,7 +705,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -724,7 +724,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/" itemprop="url">requests库</a></h1>
+                <a class="post-title-link" href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="url">json文件处理</a></h1>
         
 
         <div class="post-meta">
@@ -736,8 +736,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-21T14:45:23+08:00">
-                2020-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-10T03:00:12+08:00">
+                2020-04-10
               </time>
             
 
@@ -777,8 +777,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/" itemprop="commentCount"></span>
+                <a href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -800,7 +800,7 @@
                   <span class="post-meta-item-text">Words count in article:</span>
                 
                 <span title="Words count in article">
-                  923字
+                  489字
                 </span>
               
 
@@ -816,7 +816,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  4分钟
+                  1分钟
                 </span>
               
             </div>
@@ -838,10 +838,10 @@
 
       
         
-          <h1 id="4-requests库"><a href="#4-requests库" class="headerlink" title="4-requests库"></a>4-requests库</h1><p>虽然Python的标准库中 urllib模块已经包含了平常我们使用的大多数功能，但是它的 API 使用起来让人感觉不太好，而 Requests宣传是 “HTTP for Humans”，说明使用更简洁方便。</p>
+          <h1 id="json文件处理"><a href="#json文件处理" class="headerlink" title="json文件处理"></a>json文件处理</h1><h2 id="什么是json："><a href="#什么是json：" class="headerlink" title="什么是json："></a>什么是json：</h2><p>JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。它基于 ECMAScript (w3c制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。更多解释请见：<a href="https://baike.baidu.com/item/JSON/2462549?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/JSON/2462549?fr=aladdin</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#more" rel="contents">
               Read more »
             </a>
           </div>
@@ -899,7 +899,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -918,7 +918,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/" itemprop="url">urllib库</a></h1>
+                <a class="post-title-link" href="/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">MongoDB数据库</a></h1>
         
 
         <div class="post-meta">
@@ -930,8 +930,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-20T17:32:34+08:00">
-                2020-03-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-08T21:15:12+08:00">
+                2020-04-08
               </time>
             
 
@@ -971,8 +971,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/" itemprop="commentCount"></span>
+                <a href="/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -994,7 +994,7 @@
                   <span class="post-meta-item-text">Words count in article:</span>
                 
                 <span title="Words count in article">
-                  2.3k字
+                  1.2k字
                 </span>
               
 
@@ -1010,7 +1010,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  9分钟
+                  5分钟
                 </span>
               
             </div>
@@ -1032,10 +1032,11 @@
 
       
         
-          <h1 id="3-urllib库"><a href="#3-urllib库" class="headerlink" title="3-urllib库"></a>3-urllib库</h1><p><code>urllib</code>库是<code>Python</code>中一个最基本的网络请求库。可以模拟浏览器的行为，向指定的服务器发送一个请求，并可以保存服务器返回的数据。</p>
+          <h1 id="MongoDB数据库"><a href="#MongoDB数据库" class="headerlink" title="MongoDB数据库"></a>MongoDB数据库</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>官方文档：<a href="http://www.mongoing.com/docs/" target="_blank" rel="noopener">http://www.mongoing.com/docs/</a></p>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>MongoDB是一个面向文档的数据库<br> 举例：{“foo”:3, “greeting”:“Hello,world!”}<br> 区分大小写，且key唯一，不可重复，文档可嵌套</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/20/python%E7%88%AC%E8%99%AB/3-urllib%E5%BA%93/#more" rel="contents">
+            <a class="btn" href="/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/#more" rel="contents">
               Read more »
             </a>
           </div>
@@ -1093,7 +1094,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/19/python%E7%88%AC%E8%99%AB/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1112,7 +1113,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/19/python%E7%88%AC%E8%99%AB/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" itemprop="url">http协议和Chrome抓包工具</a></h1>
+                <a class="post-title-link" href="/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">MySQL数据库</a></h1>
         
 
         <div class="post-meta">
@@ -1124,8 +1125,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-19T13:43:00+08:00">
-                2020-03-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-08T00:00:00+08:00">
+                2020-04-08
               </time>
             
 
@@ -1165,8 +1166,206 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/19/python%E7%88%AC%E8%99%AB/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/19/python%E7%88%AC%E8%99%AB/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/" itemprop="commentCount"></span>
+                <a href="/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  603字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  2分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h1><h2 id="安装mysql："><a href="#安装mysql：" class="headerlink" title="安装mysql："></a>安装mysql：</h2><ol>
+<li>在官网：<a href="https://dev.mysql.com/downloads/windows/installer/5.7.html" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/5.7.html</a></li>
+<li>如果提示没有<code>.NET Framework</code>框架。那么就在提示框中找到下载链接，下载一个就可以了。</li>
+<li>如果提示没有<code>Microsoft Virtual C++ x64(x86)</code>，那么百度或者谷歌这个软件安装即可。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/#more" rel="contents">
+              Read more »
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    <div>
+    	
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="url">excel文件处理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T20:32:12+08:00">
+                2020-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">python爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1204,7 +1403,7 @@
                   <span class="post-meta-item-text">Reading time ≈</span>
                 
                 <span title="Reading time">
-                  4分钟
+                  5分钟
                 </span>
               
             </div>
@@ -1226,10 +1425,14 @@
 
       
         
-          <h1 id="2-http协议和Chrome抓包工具"><a href="#2-http协议和Chrome抓包工具" class="headerlink" title="2-http协议和Chrome抓包工具"></a>2-http协议和Chrome抓包工具</h1><h2 id="什么是http和https协议："><a href="#什么是http和https协议：" class="headerlink" title="什么是http和https协议："></a>什么是http和https协议：</h2><p>HTTP协议：全称是<code>HyperText Transfer Protocol</code>，中文意思是超文本传输协议，是一种发布和接收HTML页面的方法。服务器端口号是<code>80</code>端口。 HTTPS协议：是HTTP协议的加密版本，在HTTP下加入了SSL层。服务器端口号是<code>443</code>端口。</p>
+          <h1 id="excel文件处理"><a href="#excel文件处理" class="headerlink" title="excel文件处理"></a>excel文件处理</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ol>
+<li>pandas依赖处理Excel的xlrd模块，所以我们需要提前安装这个，安装命令是：pip install xlrd</li>
+<li>安装pandas模块还需要一定的编码环境，所以我们自己在安装的时候，确保你的电脑有这些环境：Net.4 、VC-Compiler以及winsdk_web，如果大家没有这些软件~可以咨询我们的辅导员索要相关安装工具。</li>
+<li>步骤1和2 准备好了之后，我们就可以开始安装pandas了，安装命令是：pip install pandas</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/19/python%E7%88%AC%E8%99%AB/2-http%E5%8D%8F%E8%AE%AE%E5%92%8CChrome%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7/#more" rel="contents">
+            <a class="btn" href="/2020/04/06/python%E7%88%AC%E8%99%AB/8-excel%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/#more" rel="contents">
               Read more »
             </a>
           </div>
@@ -1287,7 +1490,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/15/python%E7%88%AC%E8%99%AB/python%E7%88%AC%E8%99%AB%E7%BB%AD/">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/05/c++/3-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="philxling">
@@ -1306,7 +1509,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/15/python%E7%88%AC%E8%99%AB/python%E7%88%AC%E8%99%AB%E7%BB%AD/" itemprop="url">python爬虫基础续</a></h1>
+                <a class="post-title-link" href="/2020/04/05/c++/3-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" itemprop="url">运算符重载</a></h1>
         
 
         <div class="post-meta">
@@ -1318,8 +1521,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-15T18:50:29+08:00">
-                2020-03-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-05T23:11:21+08:00">
+                2020-04-05
               </time>
             
 
@@ -1341,8 +1544,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">python爬虫</span>
+                  <a href="/categories/c/" itemprop="url" rel="index">
+                    <span itemprop="name">c++</span>
                   </a>
                 </span>
 
@@ -1359,8 +1562,593 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/15/python%E7%88%AC%E8%99%AB/python%E7%88%AC%E8%99%AB%E7%BB%AD/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/15/python%E7%88%AC%E8%99%AB/python%E7%88%AC%E8%99%AB%E7%BB%AD/" itemprop="commentCount"></span>
+                <a href="/2020/04/05/c++/3-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/05/c++/3-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  103字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>运算符重载</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/05/c++/3-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#more" rel="contents">
+              Read more »
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    <div>
+    	
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/" itemprop="url">mysql服务消失问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-05T02:42:00+08:00">
+                2020-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/problem/" itemprop="url" rel="index">
+                    <span itemprop="name">problem</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  278字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="mysql服务消失问题"><a href="#mysql服务消失问题" class="headerlink" title="mysql服务消失问题"></a>mysql服务消失问题</h2><p>今天想着从数据库复制一篇文章,然后命令行连接报错,我一看服务消失,应该是装多个没改端口造成的,直接卸载重装</p>
+<h4 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1 官网下载"></a>1 官网下载</h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://dev.mysql.com/downloads/file/?id=492456</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后本地卸载mysql后会保留data目录,</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/05/problem/mysql%E6%9C%8D%E5%8A%A1%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98/#more" rel="contents">
+              Read more »
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    <div>
+    	
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/" itemprop="url">c语言指针</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T05:41:58+08:00">
+                2020-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c/" itemprop="url" rel="index">
+                    <span itemprop="name">c++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  875字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  5分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>C语言用三种方式打印数组</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/04/c++/1-c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/#more" rel="contents">
+              Read more »
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+<div>
+      
+</div>
+
+    
+
+    <div>
+    	
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/04/problem/Hexo%E7%94%A8gulp%E5%8E%8B%E7%BC%A9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/04/problem/Hexo%E7%94%A8gulp%E5%8E%8B%E7%BC%A9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="url">Hexo用gulp压缩静态资源的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T05:40:48+08:00">
+                2020-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/problem/" itemprop="url" rel="index">
+                    <span itemprop="name">problem</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/04/problem/Hexo%E7%94%A8gulp%E5%8E%8B%E7%BC%A9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E9%97%AE%E9%A2%98/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/problem/Hexo%E7%94%A8gulp%E5%8E%8B%E7%BC%A9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1420,824 +2208,12 @@
 
       
         
-          <p>下载器中间件middleware主要有两个类</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">process_request(spider,request)</span><br><span class="line">process_response()</span><br></pre></td></tr></tbody></table></figure>
+          <h3 id="Hexo-建站面临的访问缓慢问题一直不得其解-经过大量的搜索后解决一半"><a href="#Hexo-建站面临的访问缓慢问题一直不得其解-经过大量的搜索后解决一半" class="headerlink" title="Hexo 建站面临的访问缓慢问题一直不得其解,经过大量的搜索后解决一半"></a>Hexo 建站面临的访问缓慢问题一直不得其解,经过大量的搜索后解决一半</h3><p>搜索几乎都是用neat和gulp,但是都是老版本的js,运行一直报错</p>
+<h4 id="1-安装-gulp"><a href="#1-安装-gulp" class="headerlink" title="1 安装 gulp"></a>1 安装 gulp</h4><p>站点目录下执行</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp -g</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/15/python%E7%88%AC%E8%99%AB/python%E7%88%AC%E8%99%AB%E7%BB%AD/#more" rel="contents">
-              Read more »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    <div>
-    	
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/03/08/mysql/mysql1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="philxling">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="philxling">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/08/mysql/mysql1/" itemprop="url">mysql连表查询</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-08T12:00:25+08:00">
-                2020-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">mysql</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/03/08/mysql/mysql1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/08/mysql/mysql1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article:</span>
-                
-                <span title="Words count in article">
-                  20.9k字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time ≈</span>
-                
-                <span title="Reading time">
-                  109分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><p>作者: philxling</p>
-<p>通过多个表,然后用log记录的方式记录知识:</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/08/mysql/mysql1/#more" rel="contents">
-              Read more »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    <div>
-    	
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/05/25/linux/linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="philxling">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="philxling">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/25/linux/linux/" itemprop="url">linux</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-25T08:55:59+08:00">
-                2020-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/05/25/linux/linux/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/25/linux/linux/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article:</span>
-                
-                <span title="Words count in article">
-                  1.3k字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time ≈</span>
-                
-                <span title="Reading time">
-                  5分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><p>day1</p>
-<ol>
-<li><p>tree 查看目录结构，需要安装 sudo apt-get install tree(ubuntu)</p>
-</li>
-<li><p>ls 查看指定目录下所有文件和目录信息 参数 -a 显示隐藏文件 -l 显示详细信息。</p>
-</li>
-<li><p>cd 非指令，在/bin目录下不能找到。</p>
-</li>
-<li><p>文件详细9个部分：</p>
-<p><img src="/2020/05/25/linux/linux/image-20200525090438306.png" alt="image-20200525090438306"></p>
-</li>
-</ol>
-<p>第一个字母表示文件类型，d：目录，-：普通目录，s：socket文件，p：管道，c：字符设备，l：链接目录 ，b:块设备。后面每三个字母表示文件所有者即：u，同组用户：g，其他人：o。w表示写权限数字2表示，r读权限数字4，x执行权限1.777表示所有者同组用户，其他人都有读写执行权限。后面的数字表示，文件节点，当文件节点为0，表示这块内存可以存放其他文件。</p>
-<p>增加权限：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod u/g/o/a+/-/=rwx 文件名 权限的改变</span><br><span class="line">chown 改变文件所属组和文件所有者 如 chown alex:root Test.cpp</span><br><span class="line">chgrp 改变组</span><br></pre></td></tr></tbody></table></figure>
-
-<p>which 查看命令所在目录<code>which cp</code></p>
-<p>sudo apt-get  clean 清理文件安装包，所在目录<code>/var/cache/apt/archives/</code> </p>
-<p>创建/删除目录  mkdir 目录名 创建多级 mkdir -r 目录名 如：<code>mkdir -r /aa/bb/cc</code>删除目录  rmdir  只能删除空目录或rm -r 递归删除目录以及下的文件。删除文件 rm file  参数 -i用于提示是否删除。</p>
-<p>创建文件  touch  文件名。 </p>
-<p>复制文件  cp file.txt file1.txt 将file的内容复制到file1 文件不存在则创建，文件存在覆盖，cp 复制目录 cp -r  dir1 dir2 递归复制，如果存在会放在dir2中。</p>
-<p>查看文件 cat，more，less，head，tail如：<code>tail -5 Test.cpp</code></p>
-<p>创建链接 软链接（快捷方式）文件路径是绝对路径 ，需要参数-s 如：<code>ln -s /home/a.txt a.test</code></p>
-<p><img src="/2020/05/25/linux/linux/image-20200525093300101.png" alt="image-20200525093300101"></p>
-<p>查找文件 find ，grep 语法： <code>find+路径+-type/-size/-name 类型/大小/名称</code>，如<code>find / -name hello;find /usr/ -name "Test.cpp";find /usr/ -size -10k ;find /usr/bin/ -size +10M -size -15M;find /usr/ -type p</code></p>
-<p>grep 参数-r递归查找 语法：<code>grep -r "查找的关键字"+路径</code></p>
-<p>u盘的挂载卸载：自动挂载在/media下面。手动挂载在/mnt下。<code>fdisk -l</code>查看磁盘 。<code>sudo mount /dev/sdb3 /mnt/</code>手动挂载。</p>
-<p>卸载：不能在使用U盘的目录中卸载<code>umount /mnt</code></p>
-<p>压缩工具：gzip，bzip2 语法：<code>gzip 文件名</code>。<code>bzip2 文件名</code>，bzip的参数-k可以保留文件。解压 <code>gunzip *.gz</code>,不能保留文件。解压：<code>bunzip2 *.bz2</code> 。两个都不能压缩目录。</p>
-<p>tar 参数：c 创建，x释放（解压），v 查看，f 文件名，z使用gzip的方式生成.gz。j使用bzip生成.bz2。</p>
-<p>压缩：<code>tar czvf 文件名.tar.gz+文件或目录；tar cjvf 文件名.tar.bz2+文件或目录</code>。解压缩: <code>tar zxvf  .gz的压缩包  -C（到指定目录）+路径;tar jxvf  .bz2的压缩包  -C（到指定目录）+路径;</code></p>
-<p>rar压缩：需要安装sudo apt-get install rar. <code>rar a 压缩包名（不同后缀）+文件名或目录;rar x 压缩包+路径；</code></p>
-<p>zip压缩：<code>zip 压缩包名（不要后缀）+文件名或目录(目录需要-r)；解压：unzip 压缩包名 -d(到指定目录) +路径;</code></p>
-<p>进程：ps 参数a（列出当前所有用户的信息）u显示丰富，x查看没有终端的应用程序 <code>ps aux</code></p>
-<p>使用管道管理进程：<code>ps aux | grep bash ;kill -l;kill -9 进程ID</code></p>
-<p>查看当前的环境变量 env 并显示PATH <code>env | grep PATH</code> top显示进程滚动 <code>top</code></p>
-<p>网络管理：<code>ifconfig</code> 通讯 ping 如：<code>ping 192.168.0.106 -c 4</code>-c表示回馈4条信息就cut。-i表示多少秒通信一次。</p>
-<p>查看IP： nslookup 如：<code>nslookup www.baidu.com</code></p>
-<p>用户管理：创建用户： <code>sudo adduser +用户名</code>,还可以使用<code>sudo useradd -s /bin/bash -g Robin -d /home/Robin -m Robin</code>会提示Robin组不存在。创建Robin组：<code>sudo groupadd Robin</code>,指定密码：<code>sudo passwd Robin</code>删除用户：<code>sudo deluser 用户名</code>未删除/home/用户名 的内容，需要自己删除。2 <code>sudo userdel -r 用户名</code>删除比较完全，推荐。查看所有用户：<code>vim /etc/passwd</code></p>
-<p>ftp服务器：安装vsftpd 。<code>sudo apt-get install vsftpd;修改配置文件；vim /etc/vsftpd.conf ；listen=YES，anonymous_enable=YES，write_enable=YES，local_umask=022，anon_upload_enable=YES，anon_mkdir_write_enable=YES，重启服务： sudo service vsftpd restart,服务器配置完成</code>客户端的登录上传和下载：使用<code>ftp ip地址（ftp的服务器地址）</code>,上传(只能上传登录ftp服务器前的目录下的文件):put file;下载：get file。匿名用户登录：1 修改配置文件 增加 <code>anon_root=路径；重启服务。客户端登陆：ftp ip；name：anonymous;passwd:空；登录</code>匿名登录只会在anon_root的目录下切换。</p>
-<p>lftp客户端：登录：<code>lftp IP地址;login；可以切换本地目录lcd，上传多个文件mput；下载目录：mirror 目录；上传目录mirror -R 多个目录及其子目录</code></p>
-<p>nfs服务器（用于共享文件夹）：安装： <code>sudo apt-get install nfs-kernel-server;修改配置文件：vim /etc/exports;增加共享目录：/usr/nfsshare/ *(网段)（rw（可读可写）ro（read only）,ayns（同步到磁盘））；重启服务；客户端登陆挂载：mount ip：共享文件夹路径 /mnt；</code>取消挂载：<code>sudo umount /mnt</code></p>
-<p>ssh服务器：<code>sudo apt-get install openssh-server;登陆：ssh 用户名称@ip</code></p>
-<p>scp超级拷贝：<code>scp -r 目标用户名@目标ip：目标目录路径 /保存到本机的绝对路径</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    <div>
-    	
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="philxling">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="philxling">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/" itemprop="url">mui框架</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-22T23:17:02+08:00">
-                2020-05-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article:</span>
-                
-                <span title="Words count in article">
-                  7字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time ≈</span>
-                
-                <span title="Reading time">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="mui框架"><a href="#mui框架" class="headerlink" title="mui框架"></a>mui框架</h1><p>mui框架很坑。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-<div>
-      
-</div>
-
-    
-
-    <div>
-    	
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="philxling">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="philxling">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/" itemprop="url">常用算法和排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T23:27:01+08:00">
-                2020-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/c/" itemprop="url" rel="index">
-                    <span itemprop="name">c++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article:</span>
-                
-                <span title="Words count in article">
-                  50字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time ≈</span>
-                
-                <span title="Reading time">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>函数对象</p>
-<p><img src="/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/image-20200325053739130.png" alt="image-20200325053739130"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/#more" rel="contents">
+            <a class="btn" href="/2020/04/04/problem/Hexo%E7%94%A8gulp%E5%8E%8B%E7%BC%A9%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
               Read more »
             </a>
           </div>
