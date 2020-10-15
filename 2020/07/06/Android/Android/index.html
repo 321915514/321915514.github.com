@@ -1,0 +1,1540 @@
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="en"><head>
+<script type="text/javascript" src="/js/src/love.js"></script>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="philxling" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Even miracle take a moment  Do what feels right to you安卓开发功能1AlbumMainActivity(专辑主页面)，首先初始化页面，获取AlbumList，得到专辑id，onActivityResult用于页面传值。onResume和onPause调用友盟。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发">
+<meta property="og:url" content="http://philxling.cn/2020/07/06/Android/Android/index.html">
+<meta property="og:site_name" content="philxling">
+<meta property="og:description" content="Even miracle take a moment  Do what feels right to you安卓开发功能1AlbumMainActivity(专辑主页面)，首先初始化页面，获取AlbumList，得到专辑id，onActivityResult用于页面传值。onResume和onPause调用友盟。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://philxling.cn/2020/07/06/Android/Android/Rxjava1.png">
+<meta property="og:image" content="http://philxling.cn/2020/07/06/Android/Android/Rxjava2.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-71eb569b296c1f18.png">
+<meta property="og:image" content="http://philxling.cn/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817110844146.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-33a49ffd2ec60794.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-dc0a7df673324e21.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-3fa4b1fd4f561820.png">
+<meta property="og:image" content="http://philxling.cn/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817121034116.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-214478680237ffb8.png">
+<meta property="og:image" content="http://philxling.cn/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817171213846.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/944365-3997d7540acda975.png">
+<meta property="article:published_time" content="2020-07-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-10-15T04:26:41.689Z">
+<meta property="article:author" content="philxling">
+<meta property="article:tag" content="spider">
+<meta property="article:tag" content=" python">
+<meta property="article:tag" content=" java ">
+<meta property="article:tag" content="c++">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://philxling.cn/2020/07/06/Android/Android/Rxjava1.png">
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://philxling.cn/2020/07/06/Android/Android/">
+
+
+
+
+
+  <title>Android开发 | philxling</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<a href="https://github.com/321915514" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">philxling</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sometimes,Nowhere means "Now""Here"</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://philxling.cn/2020/07/06/Android/Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="philxling">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="philxling">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android开发</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-06T00:00:00+08:00">
+                2020-07-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/06/Android/Android/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/06/Android/Android/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article:</span>
+                
+                <span title="Words count in article">
+                  3.2k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time ≈</span>
+                
+                <span title="Reading time">
+                  15分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>Even miracle take a moment 
+Do what feels right to you</code></pre><h3 id="安卓开发功能"><a href="#安卓开发功能" class="headerlink" title="安卓开发功能"></a>安卓开发功能</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AlbumMainActivity(专辑主页面)，首先初始化页面，获取AlbumList，得到专辑id，onActivityResult用于页面传值。onResume和onPause调用友盟。</span><br></pre></td></tr></tbody></table></figure>
+<a id="more"></a>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">// NetHelper 解析，创建单例，用于调用，初始化检查设备在线的状态，如果是wifi，开始局域网扫描，扫描先shotdownNow()，然后通过广播地址（255.255.255.255）,通过定时执行0秒延时，隔3秒，执行线程池中执行发送信号（也就是url，DEVICE_DISCOVERY = "/discovery?param=xiaotingting&port=255.255.255.255";）线程执行sendBroadcast（数据，ip），通过DatagramPacket（就像通信的船），（DatagramSocket是两个港口），其中DatagramPacket会使用四个参数，字节，长度，广播地址（255...），端口号</span></span><br><span class="line">	<span class="comment">// 发送广播</span></span><br><span class="line">	        mSendSocket.setBroadcast(<span class="keyword">true</span>);</span><br><span class="line">            mSendSocket.setSoTimeout(<span class="number">5000</span>);</span><br><span class="line">            mSendSocket.send(sendPacket);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">startVboxPoll</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">if</span> (mPollExecutor != <span class="keyword">null</span> || mDeviceId == <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> period = isSendLAN ? <span class="number">1</span> : <span class="number">3</span>; <span class="comment">//局域网1秒轮询，远程3秒轮询</span></span><br><span class="line">        mDateCheckOnline = <span class="keyword">new</span> Date();</span><br><span class="line">        mPollExecutor = <span class="keyword">new</span> ScheduledThreadPoolExecutor(<span class="number">1</span>);</span><br><span class="line">        mPollExecutor.scheduleAtFixedRate(<span class="keyword">this</span>::doPollRunnable, <span class="number">0</span>, period, TimeUnit.SECONDS);</span><br><span class="line">    }</span><br><span class="line">    <span class="meta">@SuppressLint</span>(<span class="string">"CheckResult"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">doDiscoverRunnable</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">if</span> (isInWIFI && !isSendLAN) {</span><br><span class="line"></span><br><span class="line">            <span class="comment">//发送discovery命令</span></span><br><span class="line">            sendDeviceDiscovery();</span><br><span class="line">            <span class="comment">// 此方法用于轮询若是局域网，则1秒轮询，若是远程3秒执行轮询</span></span><br><span class="line">            startVboxPoll();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">        mPollExecutor = <span class="keyword">new</span> ScheduledThreadPoolExecutor(<span class="number">1</span>);</span><br><span class="line">        mPollExecutor.scheduleAtFixedRate(<span class="keyword">this</span>::doPollRunnable, <span class="number">0</span>, period, TimeUnit.SECONDS);</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">long</span> userId)</span> </span>{</span><br><span class="line">        LogUtils.d(<span class="string">"NetHelper 初始化 userId:"</span> + userId);</span><br><span class="line">        <span class="keyword">if</span> (userId == <span class="number">0</span>) {</span><br><span class="line">            closeConnect();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span> (mLanBusiness == <span class="keyword">null</span>) mLanBusiness = <span class="keyword">new</span> LANBusiness();</span><br><span class="line">        <span class="keyword">if</span> (mNetDataHelper == <span class="keyword">null</span>) mNetDataHelper = <span class="keyword">new</span> NetDataHelper();</span><br><span class="line">        <span class="keyword">if</span> (mMQTTBusiness == <span class="keyword">null</span>) mMQTTBusiness = <span class="keyword">new</span> MQTTBusiness();</span><br><span class="line">        mDateRecData = <span class="keyword">null</span>;</span><br><span class="line">        mDateSendPoll = <span class="keyword">null</span>;</span><br><span class="line">        mDateCheckOnline = <span class="keyword">null</span>;</span><br><span class="line">        mNetDataHelper.init(userId);</span><br><span class="line">        mLanBusiness.startListen();</span><br><span class="line">        mMQTTBusiness.init(userId);</span><br><span class="line">        checkDeviceOnline();</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置设备Id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> deviceId</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDeviceId</span><span class="params">(<span class="keyword">long</span> deviceId)</span> </span>{</span><br><span class="line">        mDeviceId = deviceId;</span><br><span class="line">        <span class="keyword">if</span> (mLanBusiness != <span class="keyword">null</span>) mLanBusiness.setDeviceId(deviceId);</span><br><span class="line">        <span class="keyword">if</span> (mMQTTBusiness != <span class="keyword">null</span>) mMQTTBusiness.setDeviceId(deviceId);</span><br><span class="line">        checkDeviceOnline();<span class="comment">//重新切换局域网设备发现</span></span><br><span class="line">        <span class="comment">// 切换设备的话需要重新链接</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	通过局域网的广播发送数据，同网段都能收到</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">play</span><br><span class="line"></span><br><span class="line"> 初始化</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setVboxPoll</span><span class="params">(<span class="keyword">boolean</span> isVboxPoll)</span> </span>{</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.isVboxPoll = isVboxPoll;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.isVboxPoll) {</span><br><span class="line">            startVboxPoll();</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            stopVboxPoll();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//如果设备不是真待机的情况下就打开轮训开关</span></span><br><span class="line">    NetHelper.getInstance().setVboxPoll(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//处理子线程发送的信息</span></span><br><span class="line">    handleMessage() </span><br><span class="line">    <span class="comment">//其余是处理各种点击事件，但是真正的处理逻辑是在AppPlayControlManager里面</span></span><br><span class="line">    <span class="comment">//AppPlayControlManager用于处理真正的逻辑，创建单例，进度条监视器，播放监听，</span></span><br><span class="line"><span class="comment">// PlayManager.getInstance().setAppPlayState(state);设置播放状态为正常或者其他.</span></span><br><span class="line">    <span class="comment">// 初始化PhonePlayView()</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initPhonePlayView</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="comment">// 初始化界面信息</span></span><br><span class="line">        setAppPlayInfoAndUi(PlayManager.getInstance().getPhoneCurrentVoiceInfo());</span><br><span class="line">        <span class="comment">// 得到播放状态 播放状态可以分为normal playing，pause，error</span></span><br><span class="line">        setAppPlayStateAndUi(PlayManager.getInstance().getAppPlayState());</span><br><span class="line">        <span class="comment">// 得到播放顺序的模式</span></span><br><span class="line">        setAppPlayModeAndUi(PlayManager.getInstance().getPhonePlayMode());</span><br><span class="line">        <span class="comment">// 进度条</span></span><br><span class="line">        setAppUiPlayProgressUi(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//        initPhonePlayKeyView();</span></span><br><span class="line">        <span class="comment">// </span></span><br><span class="line">        playGifControlTop();</span><br><span class="line">        <span class="comment">//mPlayCoverTopGif.setImageDrawable(mGifDrawable);</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(PlayManager.getInstance().getAppPlayState() == PlayData.APP_PLAY_STATE_PAUSE){</span><br><span class="line">            pauseGifControlTop();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"><span class="comment">// 其余为各种事件的处理</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//高斯模糊</span></span><br><span class="line"><span class="comment">//        Glide.with(mContext).load(voiceInfo.getCoverUrl()).apply(RequestOptions.bitmapTransform(new BlurTransformation(25,5))).into(new CustomTarget<drawable>() {</drawable></span></span><br><span class="line"><span class="comment">//            @Override</span></span><br><span class="line"><span class="comment">//            public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<!--? super Drawable--> transition) {</span></span><br><span class="line"><span class="comment">//                Drawable drawable = resource.getCurrent();</span></span><br><span class="line"><span class="comment">//                drawable = DrawableCompat.wrap(drawable);</span></span><br><span class="line"><span class="comment">//                drawable.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);</span></span><br><span class="line"><span class="comment">//                mPlayMainLayout.setBackground(drawable);</span></span><br><span class="line"><span class="comment">//            }</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            @Override</span></span><br><span class="line"><span class="comment">//            public void onLoadCleared(@Nullable Drawable placeholder) {</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            }</span></span><br><span class="line"><span class="comment">//        });</span></span><br></pre></td></tr></tbody></table></figure>
+<p>登陆接口采用jbush，采用rustful接口方式，对接后台比较方便，<br>绑定订阅到rxjava </p>
+<p>rxjava的原理，被观察者产生一系列的事件，通过订阅者传递给观察者，观察者通过一些列的事件作出响应的模式（特点：链式调用）</p>
+<p>Rxjava 的优雅实现</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Observable.create(<span class="keyword">new</span> ObservableOnSubscribe<integer>() {</integer></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(@NonNull ObservableEmitter<integer> emitter)</integer></span> </span>{</span><br><span class="line">        emitter.onNext(<span class="number">1</span>);</span><br><span class="line">        emitter.onNext(<span class="number">2</span>);</span><br><span class="line">        emitter.onNext(<span class="number">3</span>);</span><br><span class="line">        emitter.onComplete();</span><br><span class="line">    }</span><br><span class="line">}).subscribe(<span class="keyword">new</span> Observer<integer>() {</integer></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(@NonNull Disposable d)</span> </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,<span class="string">"onSubscribe"</span>+d);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(@NonNull Integer integer)</span> </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,<span class="string">"onNext"</span>+integer);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(@NonNull Throwable e)</span> </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,<span class="string">"onError"</span>+e);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,<span class="string">"onComplete"</span>);</span><br><span class="line">    }</span><br><span class="line">});</span><br><span class="line"><span class="comment">// 基本形式，被观察者.subscribe(观察者)，subscribe 有多个重载版本</span></span><br><span class="line"></span><br><span class="line">Disposable disposable <span class="comment">// 可切断观察者和被观察者的链接</span></span><br></pre></td></tr></tbody></table></figure>
+<img src="/2020/07/06/Android/Android/Rxjava1.png">
+
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Observer<integer>() {</integer></span><br><span class="line">            <span class="keyword">private</span> Disposable disposable;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(@NonNull Disposable d)</span> </span>{</span><br><span class="line">                Log.e(<span class="string">"TAG"</span>,<span class="string">"onSubscribe"</span>+d);</span><br><span class="line">                <span class="keyword">this</span>.disposable = d;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(@NonNull Integer integer)</span> </span>{</span><br><span class="line">                Log.e(<span class="string">"TAG"</span>,<span class="string">"onNext"</span>+integer);</span><br><span class="line">                <span class="keyword">if</span> (integer == <span class="number">2</span>){</span><br><span class="line">                    disposable.dispose();</span><br><span class="line">                    Log.e(<span class="string">"TAG"</span>,<span class="string">"断开链接"</span>);</span><br><span class="line">                }</span><br><span class="line"></span><br><span class="line">            }</span><br></pre></td></tr></tbody></table></figure>
+<img src="/2020/07/06/Android/Android/Rxjava2.png">
+
+<h4 id="Rxjava创建操作符"><a href="#Rxjava创建操作符" class="headerlink" title="Rxjava创建操作符"></a>Rxjava创建操作符</h4><p>Rxjava 快速创建observable<code>just()</code>快速创建，最多发送10个参数</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Observable.just(<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>).subscribe(<span class="keyword">new</span> Observer<integer>(){</integer></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(@NonNull Disposable d)</span> </span>{</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    ...</span><br></pre></td></tr></tbody></table></figure>
+
+<p>​    <code>fromArray()</code>快速创建一个被观察者对象，发送10个以上事件数组形式</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer[] items = {<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>};</span><br><span class="line">Observable.fromArray(items).subscribe(...)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">额外方法：</span><br><span class="line"></span><br><span class="line">![image-20200814151328887](/Users/philxling/Library/Application Support/typora-user-images/image-20200814151328887.png)</span><br><span class="line"></span><br><span class="line">延迟创建(经过x秒后，自动执行某操作或周期行任务)</span><br><span class="line"></span><br><span class="line">```defer```(直到有观察者时，才动态创建被观察者&发送事件)</span><br><span class="line"></span><br><span class="line">```timer``` 延迟后发送一个事件</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">        Observable.timer(2, TimeUnit.SECONDS).subscribe(new Observer<long>() {</long></span><br><span class="line">            @Override</span><br><span class="line">            public void onSubscribe(@NonNull Disposable d) {</span><br><span class="line">                </span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onNext(@NonNull Long aLong) {</span><br><span class="line"></span><br><span class="line">            }</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```java</span><br><span class="line">//interval(第一次延迟时间，间隔时间数字，时间单位)</span><br><span class="line">Observable.interval(3,1,TimeUnit.SECONDS).subscribe(...)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```java</span><br><span class="line">// 参数1 事件序列起始点没，参数2 事件数量，参数3 第一次事件延迟发送时间，参数4 时间间隔，参数5 时间单位</span><br><span class="line">Observable.interval(3,10,2,1,TimeUnit.SECONDS).subscribe(...)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```java</span><br><span class="line">/**</span><br><span class="line">* 1 起始点</span><br><span class="line">* 2 事件数量</span><br><span class="line">*/</span><br><span class="line">Observable.range(3,10).subscribe(...)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><figcaption><span>支持long数据类型</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Rxjava + Retrofit 轮询发送请求</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">implementation 'io.reactivex.rxjava3:rxjava:3.0.4'</span><br><span class="line">implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'</span><br><span class="line"></span><br><span class="line">    // Android 支持 Retrofit</span><br><span class="line">implementation'com.squareup.retrofit2:retrofit:2.1.0'</span><br><span class="line"></span><br><span class="line">    // 支持Gson解析</span><br><span class="line">implementation 'com.squareup.retrofit2:converter-gson:2.1.0'</span><br><span class="line"></span><br><span class="line">implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'</span><br><span class="line">// 添加Rxjava+Retrofit+adapter</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建请求接口</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GetRequest_Interface</span> </span>{</span><br><span class="line">  <span class="meta">@GET</span>(<span class="string">"ajax.php?a=fy&f=auto&t=auto&w=hei%20world"</span>)</span><br><span class="line">  <span class="function">Observable<translation> <span class="title">getCall</span><span class="params">()</span></translation></span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 会自动封装url</span></span><br><span class="line">提供model</span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Translation</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> status;</span><br><span class="line">    <span class="keyword">private</span> content content;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">content</span></span>{</span><br><span class="line">      <span class="keyword">private</span> String from;</span><br><span class="line">      <span class="keyword">private</span> String to;</span><br><span class="line">      <span class="keyword">private</span> String vendor;</span><br><span class="line">      <span class="keyword">private</span> String out;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">int</span> errNo;     </span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>{</span><br><span class="line">      Log.e(<span class="string">"Rxjava"</span>,content.out);</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line"><span class="comment">// 执行请求 2 秒后执行吗，每隔一秒执行请求</span></span><br><span class="line">Observable.interval(<span class="number">2</span>,<span class="number">1</span>,TimeUnit.SECONDS).doOnNext(<span class="keyword">new</span> Consumer<long>() {</long></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Long aLong)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">    Log.e(<span class="string">"TAG"</span>,<span class="string">"第"</span> + aLong + <span class="string">"次轮询"</span>);</span><br><span class="line"></span><br><span class="line">    Retrofit retrofit = <span class="keyword">new</span> Retrofit.Builder().baseUrl(<span class="string">"https://fy.iciba.com/"</span>).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJava3CallAdapterFactory.create()).build();</span><br><span class="line">    <span class="comment">// 创建网络请求接口</span></span><br><span class="line">    GetRequest_Interface request_interface = retrofit.create(GetRequest_Interface<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    <span class="comment">// 封装</span></span><br><span class="line">    Observable<translation> observable = request_interface.getCall();</translation></span><br><span class="line">    <span class="comment">// 先在io线程执行，在mainThread处理结果</span></span><br><span class="line">    observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(<span class="keyword">new</span> Observer<translation>() {</translation></span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(@NonNull Disposable d)</span> </span>{</span><br><span class="line"></span><br><span class="line">      }</span><br><span class="line"></span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(@NonNull Translation translation)</span> </span>{</span><br><span class="line">        translation.show();</span><br><span class="line">      }</span><br><span class="line"></span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(@NonNull Throwable e)</span> </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,<span class="string">"请求失败"</span>+e);</span><br><span class="line">      }</span><br><span class="line"></span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>{</span><br><span class="line"></span><br><span class="line">      }</span><br><span class="line">    });</span><br><span class="line">  }</span><br><span class="line">}).subscribe(<span class="keyword">new</span> Observer<long>() {</long></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(@NonNull Disposable d)</span> </span>{</span><br><span class="line"></span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(@NonNull Long aLong)</span> </span>{</span><br><span class="line"></span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(@NonNull Throwable e)</span> </span>{</span><br><span class="line">    Log.e(<span class="string">"error"</span>,<span class="string">"处理error"</span>+e);</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>{</span><br><span class="line"></span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/944365-71eb569b296c1f18.png" alt></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![](https://upload-images.jianshu.io/upload_images/944365-a6f852c071db2f15.png)</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">// 采用RxJava基于事件流的链式操作</span><br><span class="line">        Observable.create(new ObservableOnSubscribe<integer>() {</integer></span><br><span class="line">            @Override</span><br><span class="line">            public void subscribe(ObservableEmitter<integer> emitter) throws Exception {</integer></span><br><span class="line">                emitter.onNext(1);</span><br><span class="line">                emitter.onNext(2);</span><br><span class="line">                emitter.onNext(3);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            // 采用flatMap（）变换操作符</span><br><span class="line">        }).flatMap(new Function<integer, observablesource<string>>() {</integer,></span><br><span class="line">            @Override</span><br><span class="line">            public ObservableSource<string> apply(Integer integer) throws Exception {</string></span><br><span class="line">                final List<string> list = new ArrayList<>();</string></span><br><span class="line">                for (int i = 0; i < 3; i++) {</span><br><span class="line">                    list.add("我是事件 " + integer + "拆分后的子事件" + i);</span><br><span class="line">                    // 通过flatMap中将被观察者生产的事件序列先进行拆分，再将每个事件转换为一个新的发送三个String事件</span><br><span class="line">                    // 最终合并，再发送给被观察者</span><br><span class="line">                }</span><br><span class="line">                return Observable.fromIterable(list);</span><br><span class="line">            }</span><br><span class="line">        }).subscribe(new Consumer<string>() {</string></span><br><span class="line">            @Override</span><br><span class="line">            public void accept(String s) throws Exception {</span><br><span class="line">                Log.d(TAG, s);</span><br><span class="line">            }</span><br><span class="line">        });</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![](https://upload-images.jianshu.io/upload_images/944365-f4340f283e5a954d.png)</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">.concatMap(new Function<integer, observablesource<string>>() {</integer,></span><br><span class="line">            @Override</span><br><span class="line">            public ObservableSource<string> apply(Integer integer) throws Exception {</string></span><br><span class="line">                final List<string> list = new ArrayList<>();</string></span><br><span class="line">                for (int i = 0; i < 3; i++) {</span><br><span class="line">                    list.add("我是事件 " + integer + "拆分后的子事件" + i);</span><br><span class="line">                    // 通过concatMap中将被观察者生产的事件序列先进行拆分，再将每个事件转换为一个新的发送三个String事件</span><br><span class="line">                    // 最终合并，再发送给被观察者</span><br><span class="line">                }</span><br><span class="line">                return Observable.fromIterable(list);</span><br><span class="line">            }</span><br><span class="line">        }).</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![](https://upload-images.jianshu.io/upload_images/944365-5278a339e4337494.png)</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">        Observable.just(1,2,3,4,5).buffer(3,1).subscribe(new Observer<list<integer>>() {</list<integer></span><br><span class="line">            @Override</span><br><span class="line">            public void onSubscribe(@NonNull Disposable d) {</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onNext(@NonNull List<integer> integers) {</integer></span><br><span class="line">                Log.e("TAG","buffer"+integers);</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onError(@NonNull Throwable e) {</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onComplete() {</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line">        });</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817110844146.png" alt="image-20200817110844146"></p>
+<p>原理：一次接收3个事件，并且步长为一，所以每次指针向后移动一个。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/944365-33a49ffd2ec60794.png" alt></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/944365-dc0a7df673324e21.png" alt></p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//组合多个观察者</span></span><br><span class="line">concat()/concatArray()<span class="comment">// 组合多个Observable对象 串行发送，concat组合被观察者数量<=4,而concatArray()则可>4</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">        Observable.concat(Observable.just(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</span><br><span class="line">                           Observable.just(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>),</span><br><span class="line">                           Observable.just(<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>),</span><br><span class="line">                           Observable.just(<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>))</span><br><span class="line">          <span class="comment">// 注：串行执行</span></span><br><span class="line">        Observable.concatArray(Observable.just(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</span><br><span class="line">                           Observable.just(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>),</span><br><span class="line">                           Observable.just(<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>),</span><br><span class="line">                           Observable.just(<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>),</span><br><span class="line">                           Observable.just(<span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>))</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// marge</span></span><br><span class="line">  merge()<span class="comment">// 数量< = 4</span></span><br><span class="line">  mergeArray() <span class="comment">//数量>4 组合被观察者并行执行</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// merge（）：组合多个被观察者（＜4个）一起发送数据</span></span><br><span class="line">        <span class="comment">// 注：合并后按照时间线并行执行</span></span><br><span class="line">        Observable.merge(</span><br><span class="line">                Observable.intervalRange(<span class="number">0</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>, TimeUnit.SECONDS), <span class="comment">// 从0开始发送、共发送3个数据、第1次事件延迟发送时间 = 1s、间隔时间 = 1s</span></span><br><span class="line">                Observable.intervalRange(<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>, TimeUnit.SECONDS)) <span class="comment">// 从2开始发送、共发送3个数据、第1次事件延迟发送时间 = 1s、间隔时间 = 1s</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><figcaption><span>mergeDelayError()```</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> ```java</span><br><span class="line">// 如果第一个事件发生error则会在后面的事发送完事件后再继续发送。</span><br><span class="line">Observable.concatArrayDelayError(</span><br><span class="line">                Observable.create(new ObservableOnSubscribe<integer>() {</integer></span><br><span class="line">                    @Override</span><br><span class="line">                    public void subscribe(ObservableEmitter<integer> emitter) throws Exception {</integer></span><br><span class="line"></span><br><span class="line">                        emitter.onNext(1);</span><br><span class="line">                        emitter.onNext(2);</span><br><span class="line">                        emitter.onNext(3);</span><br><span class="line">                        emitter.onError(new NullPointerException()); // 发送Error事件，因为使用了concatDelayError，所以第2个Observable将会发送事件，等发送完毕后，再发送错误事件</span><br><span class="line">                        emitter.onComplete();</span><br><span class="line">                    }</span><br><span class="line">                }),</span><br><span class="line">                Observable.just(4, 5, 6))</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Zip()合并多个事件</p>
+<img src="https://upload-images.jianshu.io/upload_images/944365-3fa4b1fd4f561820.png" style="zoom:67%;">
+
+<p>组合方式严格按照原先事件序列，进行对位合并，最终合并的事件数量等于多个被观察者中数量最少的数量。</p>
+<p><img src="/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817121034116.png" alt="image-20200817121034116"></p>
+<p>在rxjava3中，不会发送没有合并的事件。</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Observable.zip(Observable.create(<span class="keyword">new</span> ObservableOnSubscribe<integer>() {</integer></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(@NonNull ObservableEmitter<integer> emitter)</integer></span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                emitter.onNext(<span class="number">1</span>);</span><br><span class="line">                emitter.onNext(<span class="number">2</span>);</span><br><span class="line">                emitter.onNext(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line">        }), Observable.create(<span class="keyword">new</span> ObservableOnSubscribe<string>() {</string></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(@NonNull ObservableEmitter<string> emitter)</string></span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                emitter.onNext(<span class="string">"A"</span>);</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                emitter.onNext(<span class="string">"B"</span>);</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                emitter.onNext(<span class="string">"C"</span>);</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                emitter.onNext(<span class="string">"D"</span>);</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">                emitter.onComplete();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line">        }).subscribeOn(Schedulers.newThread()), <span class="keyword">new</span> BiFunction<integer, string, string>() {</integer,></span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Integer integer, String s)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                <span class="keyword">return</span> integer+s;</span><br><span class="line">            }</span><br><span class="line">        }).subscribe(<span class="keyword">new</span> Consumer<string>() {</string></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(String s)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                Log.e(<span class="string">"TAG"</span>,s);</span><br><span class="line">            }</span><br><span class="line">        });</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```combineLatestDelayError（）```错误处理</span><br><span class="line"></span><br><span class="line">```reduce()```把被观察者发送的事件聚合成一个事件，聚合的逻辑自己写</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">        // reduce()</span><br><span class="line">        Observable.just(1,2,3,4).reduce(new BiFunction<integer, integer, integer>() {</integer,></span><br><span class="line">            @Override</span><br><span class="line">            public Integer apply(Integer integer, Integer integer2) throws Throwable {</span><br><span class="line">                return integer * integer2;</span><br><span class="line">            }</span><br><span class="line">        }).subscribe(new Consumer<integer>() {</integer></span><br><span class="line">            @Override</span><br><span class="line">            public void accept(Integer integer) throws Throwable {</span><br><span class="line">                Log.e("TAG","reduce"+"------------"+integer);</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line">// E/TAG: reduce------------24</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">collect()  <span class="comment">//事件收集到一个数据结构中</span></span><br><span class="line"></span><br><span class="line">startWith() <span class="comment">//  发送事件前追加单个数据</span></span><br><span class="line"></span><br><span class="line">startWithArray() <span class="comment">// 追加多个数据</span></span><br><span class="line"></span><br><span class="line">count() <span class="comment">// 统计被观察者发送事件的数量</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>常见的合并/组合操作符</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/944365-214478680237ffb8.png" alt></p>
+<p>例：获取数据，若缓存中有则取缓存，否则取磁盘，否则在请求网络获取数据。</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">String memoryCache = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">String diskCache = <span class="string">"磁盘缓存"</span>;</span><br><span class="line"></span><br><span class="line">Observable memory = Observable.create(<span class="keyword">new</span> ObservableOnSubscribe<string>() {</string></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(@NonNull ObservableEmitter<string> emitter)</string></span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">        <span class="keyword">if</span>(memoryCache != <span class="keyword">null</span>){</span><br><span class="line">            emitter.onNext(memoryCache);</span><br><span class="line">        }<span class="keyword">else</span> {</span><br><span class="line">            emitter.onComplete();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">});</span><br><span class="line">Observable disk = Observable.create(<span class="keyword">new</span> ObservableOnSubscribe<string>() {</string></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(@NonNull ObservableEmitter<string> emitter)</string></span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">        <span class="keyword">if</span>(diskCache != <span class="keyword">null</span>){</span><br><span class="line">            emitter.onNext(diskCache);</span><br><span class="line">        }<span class="keyword">else</span> {</span><br><span class="line">            emitter.onComplete();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">Observable network = Observable.just(<span class="string">"从网络获取"</span>);</span><br><span class="line"></span><br><span class="line">Observable.concat(memory,disk,network).firstElement().subscribe(<span class="keyword">new</span> Consumer<string>() {</string></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(String s)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">        Log.e(<span class="string">"TAG"</span>,s);</span><br><span class="line">    }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>网络获取多个数据进行合并输出</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建retrofit</span></span><br><span class="line">Retrofit retrofit = <span class="keyword">new</span> Retrofit.Builder().baseUrl(<span class="string">"https://fy.iciba.com/"</span>).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJava3CallAdapterFactory.create()).build();</span><br><span class="line"><span class="comment">// 请求接口</span></span><br><span class="line">        GetRequest_Interface getRequest_interface = retrofit.create(GetRequest_Interface<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"><span class="comment">// 新建线程调用</span></span><br><span class="line">        Observable<translation>  observable = getRequest_interface.getCall().subscribeOn(Schedulers.io());</translation></span><br><span class="line">        Observable<translation1>  observable1 = getRequest_interface.getCall_2().subscribeOn(Schedulers.io());</translation1></span><br><span class="line"><span class="comment">// 合并输出</span></span><br><span class="line">        Observable.zip(observable1, observable, <span class="keyword">new</span> BiFunction<translation1, translation, string>() {</translation1,></span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Translation1 translation1, Translation translation)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                <span class="keyword">return</span> translation1.show()+translation.show();</span><br><span class="line">            }</span><br><span class="line">        }).subscribe(<span class="keyword">new</span> Consumer<string>() {</string></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(String s)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                Log.e(<span class="string">"TAG"</span>, <span class="string">"最终返回的数据"</span> + s);</span><br><span class="line">            }</span><br><span class="line">        }, <span class="keyword">new</span> Consumer<throwable>() {</throwable></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Throwable throwable)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">                Log.e(<span class="string">"TAG"</span>,<span class="string">"登陆失败"</span>);</span><br><span class="line">            }</span><br><span class="line">        });</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2020/07/06/Android/Android/philxling/blog/source/_posts/Android/image-20200817171213846.png" alt="image-20200817171213846"></p>
+<p> 利用<code>conbineLatest()</code>进行空值判断：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 步骤1：设置控件变量 & 绑定</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line">EditText name,age,job;</span><br><span class="line">Button list;</span><br><span class="line"></span><br><span class="line">name = (EditText) findViewById(R.id.name);</span><br><span class="line">age = (EditText) findViewById(R.id.age);</span><br><span class="line">job = (EditText) findViewById(R.id.job);</span><br><span class="line">list = (Button) findViewById(R.id.list);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 步骤2：为每个EditText设置被观察者，用于发送监听事件</span></span><br><span class="line"><span class="comment"> * 说明：</span></span><br><span class="line"><span class="comment"> * 1. 此处采用了RxBinding：RxTextView.textChanges(name) = 对对控件数据变更进行监听（功能类似TextWatcher），需要引入依赖：compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'</span></span><br><span class="line"><span class="comment"> * 2. 传入EditText控件，点击任1个EditText撰写时，都会发送数据事件 = Function3（）的返回值（下面会详细说明）</span></span><br><span class="line"><span class="comment"> * 3. 采用skip(1)原因：跳过 一开始EditText无任何输入时的空值</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line">Observable<charsequence> nameObservable = RxTextView.textChanges(name).skip(<span class="number">1</span>);</charsequence></span><br><span class="line">Observable<charsequence> ageObservable = RxTextView.textChanges(age).skip(<span class="number">1</span>);</charsequence></span><br><span class="line">Observable<charsequence> jobObservable = RxTextView.textChanges(job).skip(<span class="number">1</span>);</charsequence></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 步骤3：通过combineLatest（）合并事件 & 联合判断</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line">Observable.combineLatest(nameObservable,ageObservable,jobObservable,<span class="keyword">new</span> Function3<charsequence, charsequence, charsequence,boolean>() {</charsequence,></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">apply</span><span class="params">(@NonNull CharSequence charSequence, @NonNull CharSequence charSequence2, @NonNull CharSequence charSequence3)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 步骤4：规定表单信息输入不能为空</span></span><br><span class="line"><span class="comment">         **/</span></span><br><span class="line">        <span class="comment">// 1. 姓名信息</span></span><br><span class="line">        <span class="keyword">boolean</span> isUserNameValid = !TextUtils.isEmpty(name.getText()) ;</span><br><span class="line">        <span class="comment">// 除了设置为空，也可设置长度限制</span></span><br><span class="line">        <span class="comment">// boolean isUserNameValid = !TextUtils.isEmpty(name.getText()) && (name.getText().toString().length() > 2 && name.getText().toString().length() < 9);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. 年龄信息</span></span><br><span class="line">        <span class="keyword">boolean</span> isUserAgeValid = !TextUtils.isEmpty(age.getText());</span><br><span class="line">        <span class="comment">// 3. 职业信息</span></span><br><span class="line">        <span class="keyword">boolean</span> isUserJobValid = !TextUtils.isEmpty(job.getText()) ;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 步骤5：返回信息 = 联合判断，即3个信息同时已填写，"提交按钮"才可点击</span></span><br><span class="line"><span class="comment">         **/</span></span><br><span class="line">        <span class="keyword">return</span> isUserNameValid && isUserAgeValid && isUserJobValid;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">        }).subscribe(<span class="keyword">new</span> Consumer<boolean>() {</boolean></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Boolean s)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 步骤6：返回结果 & 设置按钮可点击样式</span></span><br><span class="line"><span class="comment">         **/</span></span><br><span class="line">        Log.e(TAG, <span class="string">"提交按钮是否可点击： "</span>+s);</span><br><span class="line">        list.setEnabled(s);</span><br><span class="line">    }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Rxjava 线程工作原理</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/944365-3997d7540acda975.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>含义</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Schedulers.immediate()</td>
+<td>当前线程=不指定线程</td>
+<td>默认</td>
+</tr>
+<tr>
+<td>AndroidSchedulers.mainThread()</td>
+<td>Android主线程</td>
+<td>main</td>
+</tr>
+<tr>
+<td>Schedulers.newThread()</td>
+<td>常规新线程</td>
+<td>耗时的操作</td>
+</tr>
+<tr>
+<td>Schedulers.io()</td>
+<td>io操作线程</td>
+<td>网络请求，读写文件等io密集型操作</td>
+</tr>
+<tr>
+<td>Schedulers.compution()</td>
+<td>cpu计算线程</td>
+<td>大量计算</td>
+</tr>
+</tbody></table>
+<p>使用：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Observable.subscribeOn()指定</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 整体方法调用顺序：观察者.onSubscribe（）> 被观察者.subscribe（）> 观察者.doOnNext（）>观察者.onNext（）>观察者.onComplete() </span></span><br><span class="line"><span class="comment">// 2. 观察者.onSubscribe（）固定在主线程进行</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+      
+    </div>
+    
+    
+    
+<div>
+      
+        
+
+      
+</div>
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat.png" alt="philxling wechat" style="width: 200px; max-width: 100%;">
+    <div>ex. subscribe to my blog by scanning my public wechat account</div>
+</div>
+
+      </div>
+    
+
+    <div>
+    	
+	    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+	
+    </div>
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢你给我糖吃!!!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="philxling WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="philxling Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    philxling
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://philxling.cn/2020/07/06/Android/Android/" title="Android开发">http://philxling.cn/2020/07/06/Android/Android/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/" rel="next" title="UML类图">
+                <i class="fa fa-chevron-left"></i> UML类图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/" rel="prev" title="Android布局属性">
+                Android布局属性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">philxling</p>
+              <p class="site-description motion-element" itemprop="description">代码改变世界</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/321915514" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:321915514wx@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.cnblogs.com/321915514wx" target="_blank" title="cnblog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>cnblog</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓开发功能"><span class="nav-number">1.</span> <span class="nav-text">安卓开发功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rxjava创建操作符"><span class="nav-number">1.1.</span> <span class="nav-text">Rxjava创建操作符</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">© <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">philxling</span>
+	<div class="theme-info">
+	  <div class="powered-by"></div>
+	  <span class="post-count"><i class="fa fa-area-chart"> 博客全站共</i>79.7k字</span>
+	</div>
+  
+</div>
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <span class="site-uv">
+  <i class="fa fa-user"> 本站访客数</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+  人
+  </span>
+
+  <span class="site-pv">
+  <i class="fa fa-eye"> 本站总访问量</i>
+  <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+  次
+  </span>
+</div>
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+<!-- 在网页底部添加网站运行时间 -->
+<div>
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/01/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Run for "+dnum+" Days ";
+        document.getElementById("times").innerHTML = hnum + " Hours " + mnum + " m " + snum + " s";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+	<script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="60" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+	<script src="https://www.fujiatian.com/js/src/av-min.js"></script>
+	<!--Valine 的核心代码库-->
+	<script src="https://www.fujiatian.com/js/src/Valine.min.js"></script>
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ounPUYOUtzvgVXvq6G23StyA-gzGzoHsz',
+        appKey: 'I097apCO08xCCR00xW6BOHLl',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 23907,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
