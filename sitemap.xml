@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://philxling.cn/2020/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/</loc>
+    
+    <lastmod>2020-10-15T06:12:33.079Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.cn/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/</loc>
+    
+    <lastmod>2020-10-15T05:42:56.537Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://philxling.cn/tags/index.html</loc>
     
     <lastmod>2020-10-15T04:26:42.005Z</lastmod>
@@ -201,13 +215,6 @@
     <loc>http://philxling.cn/2020/05/25/linux/linux/</loc>
     
     <lastmod>2020-10-15T04:26:41.909Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://philxling.cn/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/</loc>
-    
-    <lastmod>2020-10-15T04:26:41.897Z</lastmod>
     
   </url>
   
