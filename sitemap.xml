@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/archives/index.html</loc>
+    <loc>http://philxling.cn/categories/index.html</loc>
     
     <lastmod>2020-10-15T04:26:42.004Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://philxling.cn/categories/index.html</loc>
+    <loc>http://philxling.cn/archives/index.html</loc>
     
     <lastmod>2020-10-15T04:26:42.004Z</lastmod>
     
@@ -86,6 +86,13 @@
   </url>
   
   <url>
+    <loc>http://philxling.cn/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/</loc>
+    
+    <lastmod>2020-10-15T04:26:41.932Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://philxling.cn/2020/03/21/python%E7%88%AC%E8%99%AB/4-requests%E5%BA%93/</loc>
     
     <lastmod>2020-10-15T04:26:41.932Z</lastmod>
@@ -94,13 +101,6 @@
   
   <url>
     <loc>http://philxling.cn/2020/03/24/python%E7%88%AC%E8%99%AB/5-xpath%E8%AF%AD%E6%B3%95%E4%B8%8Elxml%E5%BA%93/</loc>
-    
-    <lastmod>2020-10-15T04:26:41.932Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://philxling.cn/2020/03/24/python%E7%88%AC%E8%99%AB/6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8Cre%E6%A8%A1%E5%9D%97/</loc>
     
     <lastmod>2020-10-15T04:26:41.932Z</lastmod>
     
@@ -128,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/</loc>
-    
-    <lastmod>2020-10-15T04:26:41.927Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://philxling.cn/2020/04/25/python%E7%88%AC%E8%99%AB/16-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84/</loc>
     
     <lastmod>2020-10-15T04:26:41.927Z</lastmod>
@@ -142,7 +135,14 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
+    <loc>http://philxling.cn/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/</loc>
+    
+    <lastmod>2020-10-15T04:26:41.927Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.cn/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/</loc>
     
     <lastmod>2020-10-15T04:26:41.926Z</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/</loc>
+    <loc>http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2020-10-15T04:26:41.926Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/03/13/python%E7%88%AC%E8%99%AB/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/</loc>
+    <loc>http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2020-10-15T04:26:41.925Z</lastmod>
     
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
+    <loc>http://philxling.cn/2020/03/13/python%E7%88%AC%E8%99%AB/1-%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F/</loc>
     
     <lastmod>2020-10-15T04:26:41.925Z</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/07/06/Android/Android/</loc>
+    <loc>http://philxling.cn/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</loc>
     
     <lastmod>2020-10-15T04:26:41.689Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://philxling.cn/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</loc>
+    <loc>http://philxling.cn/2020/07/06/Android/Android/</loc>
     
     <lastmod>2020-10-15T04:26:41.689Z</lastmod>
     
