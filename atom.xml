@@ -5,9 +5,9 @@
   <subtitle>Sometimes,Nowhere means &quot;Now&quot;&quot;Here&quot;</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://philxling.cn/"/>
-  <updated>2020-10-15T06:12:33.079Z</updated>
-  <id>http://philxling.cn/</id>
+  <link href="http://philxling.club/"/>
+  <updated>2022-03-22T01:44:18.630Z</updated>
+  <id>http://philxling.club/</id>
   
   <author>
     <name>philxling</name>
@@ -17,9 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python爬虫/18-CrawlSpider</title>
+    <link href="http://philxling.club/2022/03/22/python%E7%88%AC%E8%99%AB/18-CrawlSpider/"/>
+    <id>http://philxling.club/2022/03/22/python%E7%88%AC%E8%99%AB/18-CrawlSpider/</id>
+    <published>2022-03-22T01:46:36.193Z</published>
+    <updated>2022-03-22T01:44:18.630Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: CrawlSpider</span><br><span class="line">date: 2022-3-20 1:22:23</span><br><span class="line">tags: [python,python爬虫]</span><br><span class="line">categories: python爬虫</span><br><span class="line">copyright: philxling</span><br><span class="line">top: 16</span><br></pre></td></tr></tbody></table></figure><h1 id="3-CrawlSpider"><a href="#3-CrawlSpider" class="headerlink" title="3-CrawlSpider"></a>3-CrawlSpider</h1><p>在上一个糗事百科的爬虫案例中。我们是自己在解析完整个页面后获取下一页的url，然后重新发送一个请求。有时候我们想要这样做，只要满足某个条件的url，都给我进行爬取。那么这时候我们就可以通过<code>CrawlSpider</code>来帮我们完成了。<code>CrawlSpider</code>继承自<code>Spider</code>，只不过是在之前的基础之上增加了新的功能，可以定义爬取的url的规则，以后scrapy碰到满足条件的url都进行爬取，而不用手动的<code>yield Request</code>。</p><h2 id="CrawlSpider爬虫："><a href="#CrawlSpider爬虫：" class="headerlink" title="CrawlSpider爬虫："></a>CrawlSpider爬虫：</h2><h3 id="创建CrawlSpider爬虫："><a href="#创建CrawlSpider爬虫：" class="headerlink" title="创建CrawlSpider爬虫："></a>创建CrawlSpider爬虫：</h3><p>之前创建爬虫的方式是通过<code>scrapy genspider [爬虫名字] [域名]</code>的方式创建的。如果想要创建<code>CrawlSpider</code>爬虫，那么应该通过以下命令创建：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy genspider -c crawl [爬虫名字] [域名]</span><br></pre></td></tr></tbody></table></figure><h3 id="LinkExtractors链接提取器："><a href="#LinkExtractors链接提取器：" class="headerlink" title="LinkExtractors链接提取器："></a>LinkExtractors链接提取器：</h3><p>使用<code>LinkExtractors</code>可以不用程序员自己提取想要的url，然后发送请求。这些工作都可以交给<code>LinkExtractors</code>，他会在所有爬的页面中找到满足规则的<code>url</code>，实现自动的爬取。以下对<code>LinkExtractors</code>类做一个简单的介绍：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">scrapy</span>.<span class="title">linkextractors</span>.<span class="title">LinkExtractor</span><span class="params">(</span></span></span><br><span class="line"><span class="class"><span class="params">    allow = <span class="params">()</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    deny = <span class="params">()</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    allow_domains = <span class="params">()</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    deny_domains = <span class="params">()</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    deny_extensions = None,</span></span></span><br><span class="line"><span class="class"><span class="params">    restrict_xpaths = <span class="params">()</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    tags = <span class="params">(<span class="string">'a'</span>,<span class="string">'area'</span>)</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    attrs = <span class="params">(<span class="string">'href'</span>)</span>,</span></span></span><br><span class="line"><span class="class"><span class="params">    canonicalize = True,</span></span></span><br><span class="line"><span class="class"><span class="params">    unique = True,</span></span></span><br><span class="line"><span class="class"><span class="params">    process_value = None</span></span></span><br><span class="line"><span class="class"><span class="params">)</span></span></span><br></pre></td></tr></tbody></table></figure><p>主要参数讲解：</p><ul><li>allow：允许的url。所有满足这个正则表达式的url都会被提取。</li><li>deny：禁止的url。所有满足这个正则表达式的url都不会被提取。</li><li>allow_domains：允许的域名。只有在这个里面指定的域名的url才会被提取。</li><li>deny_domains：禁止的域名。所有在这个里面指定的域名的url都不会被提取。</li><li>restrict_xpaths：严格的xpath。和allow共同过滤链接。</li></ul><h3 id="Rule规则类："><a href="#Rule规则类：" class="headerlink" title="Rule规则类："></a>Rule规则类：</h3><p>定义爬虫的规则类。以下对这个类做一个简单的介绍：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">scrapy</span>.<span class="title">spiders</span>.<span class="title">Rule</span><span class="params">(</span></span></span><br><span class="line"><span class="class"><span class="params">    link_extractor, </span></span></span><br><span class="line"><span class="class"><span class="params">    callback = None, </span></span></span><br><span class="line"><span class="class"><span class="params">    cb_kwargs = None, </span></span></span><br><span class="line"><span class="class"><span class="params">    follow = None, </span></span></span><br><span class="line"><span class="class"><span class="params">    process_links = None, </span></span></span><br><span class="line"><span class="class"><span class="params">    process_request = None</span></span></span><br><span class="line"><span class="class"><span class="params">)</span></span></span><br></pre></td></tr></tbody></table></figure><p>主要参数讲解：</p><ul><li>link_extractor：一个<code>LinkExtractor</code>对象，用于定义爬取规则。</li><li>callback：满足这个规则的url，应该要执行哪个回调函数。因为<code>CrawlSpider</code>使用了<code>parse</code>作为回调函数，因此不要覆盖<code>parse</code>作为回调函数自己的回调函数。</li><li>follow：指定根据该规则从response中提取的链接是否需要跟进。</li><li>process_links：从link_extractor中获取到链接后会传递给这个函数，用来过滤不需要爬取的链接。</li></ul></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>链表</title>
-    <link href="http://philxling.cn/2020/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/"/>
-    <id>http://philxling.cn/2020/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/</id>
+    <link href="http://philxling.club/2020/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/"/>
+    <id>http://philxling.club/2020/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/</id>
     <published>2020-10-15T05:45:10.000Z</published>
     <updated>2020-10-15T06:12:33.079Z</updated>
     
@@ -32,17 +54,17 @@
     </summary>
     
     
-      <category term="c" scheme="http://philxling.cn/categories/c/"/>
+      <category term="c" scheme="http://philxling.club/categories/c/"/>
     
     
-      <category term="c" scheme="http://philxling.cn/tags/c/"/>
+      <category term="c" scheme="http://philxling.club/tags/c/"/>
     
   </entry>
   
   <entry>
     <title>Android布局属性</title>
-    <link href="http://philxling.cn/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/"/>
-    <id>http://philxling.cn/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</id>
+    <link href="http://philxling.club/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/"/>
+    <id>http://philxling.club/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</id>
     <published>2020-08-10T09:28:00.000Z</published>
     <updated>2020-10-15T04:26:41.689Z</updated>
     
@@ -55,17 +77,17 @@
     </summary>
     
     
-      <category term="Android" scheme="http://philxling.cn/categories/Android/"/>
+      <category term="Android" scheme="http://philxling.club/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://philxling.cn/tags/Android/"/>
+      <category term="Android" scheme="http://philxling.club/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android开发</title>
-    <link href="http://philxling.cn/2020/07/06/Android/Android/"/>
-    <id>http://philxling.cn/2020/07/06/Android/Android/</id>
+    <link href="http://philxling.club/2020/07/06/Android/Android/"/>
+    <id>http://philxling.club/2020/07/06/Android/Android/</id>
     <published>2020-07-05T16:00:00.000Z</published>
     <updated>2020-10-15T04:26:41.689Z</updated>
     
@@ -79,15 +101,15 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="Android" scheme="http://philxling.cn/categories/Android/"/>
+      <category term="Android" scheme="http://philxling.club/categories/Android/"/>
     
     
   </entry>
   
   <entry>
     <title>UML类图</title>
-    <link href="http://philxling.cn/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/"/>
-    <id>http://philxling.cn/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/</id>
+    <link href="http://philxling.club/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/"/>
+    <id>http://philxling.club/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/</id>
     <published>2020-06-24T09:31:33.000Z</published>
     <updated>2020-06-24T10:52:38.083Z</updated>
     
@@ -103,17 +125,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="设计模式" scheme="http://philxling.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://philxling.club/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="http://philxling.cn/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://philxling.club/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>linux库函数</title>
-    <link href="http://philxling.cn/2020/05/26/linux/linuxday2/"/>
-    <id>http://philxling.cn/2020/05/26/linux/linuxday2/</id>
+    <link href="http://philxling.club/2020/05/26/linux/linuxday2/"/>
+    <id>http://philxling.club/2020/05/26/linux/linuxday2/</id>
     <published>2020-05-26T11:02:16.000Z</published>
     <updated>2020-10-15T03:51:03.216Z</updated>
     
@@ -129,17 +151,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="linux" scheme="http://philxling.cn/categories/linux/"/>
+      <category term="linux" scheme="http://philxling.club/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://philxling.cn/tags/linux/"/>
+      <category term="linux" scheme="http://philxling.club/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>linux</title>
-    <link href="http://philxling.cn/2020/05/25/linux/linux/"/>
-    <id>http://philxling.cn/2020/05/25/linux/linux/</id>
+    <link href="http://philxling.club/2020/05/25/linux/linux/"/>
+    <id>http://philxling.club/2020/05/25/linux/linux/</id>
     <published>2020-05-25T00:55:59.000Z</published>
     <updated>2020-10-15T04:26:41.909Z</updated>
     
@@ -160,17 +182,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="linux" scheme="http://philxling.cn/categories/linux/"/>
+      <category term="linux" scheme="http://philxling.club/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://philxling.cn/tags/linux/"/>
+      <category term="linux" scheme="http://philxling.club/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>mui框架</title>
-    <link href="http://philxling.cn/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/"/>
-    <id>http://philxling.cn/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/</id>
+    <link href="http://philxling.club/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/"/>
+    <id>http://philxling.club/2020/05/22/%E5%89%8D%E7%AB%AF/mui%E6%A1%86%E6%9E%B6/</id>
     <published>2020-05-22T15:17:02.000Z</published>
     <updated>2020-10-15T04:26:42.003Z</updated>
     
@@ -187,17 +209,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="前端" scheme="http://philxling.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://philxling.club/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://philxling.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://philxling.club/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>框架快速入门</title>
-    <link href="http://philxling.cn/2020/04/29/python%E7%88%AC%E8%99%AB/17-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>http://philxling.cn/2020/04/29/python%E7%88%AC%E8%99%AB/17-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
+    <link href="http://philxling.club/2020/04/29/python%E7%88%AC%E8%99%AB/17-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>http://philxling.club/2020/04/29/python%E7%88%AC%E8%99%AB/17-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
     <published>2020-04-28T17:22:23.000Z</published>
     <updated>2020-10-15T04:26:41.928Z</updated>
     
@@ -215,19 +237,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>框架架构</title>
-    <link href="http://philxling.cn/2020/04/25/python%E7%88%AC%E8%99%AB/16-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84/"/>
-    <id>http://philxling.cn/2020/04/25/python%E7%88%AC%E8%99%AB/16-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84/</id>
+    <link href="http://philxling.club/2020/04/25/python%E7%88%AC%E8%99%AB/16-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84/"/>
+    <id>http://philxling.club/2020/04/25/python%E7%88%AC%E8%99%AB/16-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84/</id>
     <published>2020-04-24T19:12:00.000Z</published>
     <updated>2020-10-15T04:26:41.927Z</updated>
     
@@ -240,19 +262,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>图形验证码识别</title>
-    <link href="http://philxling.cn/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/"/>
-    <id>http://philxling.cn/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/</id>
+    <link href="http://philxling.club/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/"/>
+    <id>http://philxling.club/2020/04/22/python%E7%88%AC%E8%99%AB/15-%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81%E7%A0%81%E8%AF%86%E5%88%AB/</id>
     <published>2020-04-21T17:32:23.000Z</published>
     <updated>2020-10-15T04:26:41.927Z</updated>
     
@@ -265,19 +287,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>常用算法和排序</title>
-    <link href="http://philxling.cn/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/"/>
-    <id>http://philxling.cn/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/</id>
+    <link href="http://philxling.club/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/"/>
+    <id>http://philxling.club/2020/04/20/c++/7-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%92%8C%E6%8E%92%E5%BA%8F/</id>
     <published>2020-04-20T15:27:01.000Z</published>
     <updated>2020-10-15T05:42:56.537Z</updated>
     
@@ -291,17 +313,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="c++" scheme="http://philxling.cn/categories/c/"/>
+      <category term="c++" scheme="http://philxling.club/categories/c/"/>
     
     
-      <category term="c++" scheme="http://philxling.cn/tags/c/"/>
+      <category term="c++" scheme="http://philxling.club/tags/c/"/>
     
   </entry>
   
   <entry>
     <title>员工分类案例</title>
-    <link href="http://philxling.cn/2020/04/17/c++/6-%E5%91%98%E5%B7%A5%E5%88%86%E7%B1%BB%E6%A1%88%E4%BE%8B/"/>
-    <id>http://philxling.cn/2020/04/17/c++/6-%E5%91%98%E5%B7%A5%E5%88%86%E7%B1%BB%E6%A1%88%E4%BE%8B/</id>
+    <link href="http://philxling.club/2020/04/17/c++/6-%E5%91%98%E5%B7%A5%E5%88%86%E7%B1%BB%E6%A1%88%E4%BE%8B/"/>
+    <id>http://philxling.club/2020/04/17/c++/6-%E5%91%98%E5%B7%A5%E5%88%86%E7%B1%BB%E6%A1%88%E4%BE%8B/</id>
     <published>2020-04-17T15:24:57.000Z</published>
     <updated>2020-10-15T04:26:41.897Z</updated>
     
@@ -314,17 +336,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="c++" scheme="http://philxling.cn/categories/c/"/>
+      <category term="c++" scheme="http://philxling.club/categories/c/"/>
     
     
-      <category term="c++" scheme="http://philxling.cn/tags/c/"/>
+      <category term="c++" scheme="http://philxling.club/tags/c/"/>
     
   </entry>
   
   <entry>
     <title>动态网页爬虫</title>
-    <link href="http://philxling.cn/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/"/>
-    <id>http://philxling.cn/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/</id>
+    <link href="http://philxling.club/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/"/>
+    <id>http://philxling.club/2020/04/17/python%E7%88%AC%E8%99%AB/14-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB/</id>
     <published>2020-04-17T15:23:12.000Z</published>
     <updated>2020-10-15T04:26:41.926Z</updated>
     
@@ -337,19 +359,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>容器</title>
-    <link href="http://philxling.cn/2020/04/15/c++/5-%E5%AE%B9%E5%99%A8/"/>
-    <id>http://philxling.cn/2020/04/15/c++/5-%E5%AE%B9%E5%99%A8/</id>
+    <link href="http://philxling.club/2020/04/15/c++/5-%E5%AE%B9%E5%99%A8/"/>
+    <id>http://philxling.club/2020/04/15/c++/5-%E5%AE%B9%E5%99%A8/</id>
     <published>2020-04-15T15:20:00.000Z</published>
     <updated>2020-10-15T04:26:41.814Z</updated>
     
@@ -362,17 +384,17 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="c++" scheme="http://philxling.cn/categories/c/"/>
+      <category term="c++" scheme="http://philxling.club/categories/c/"/>
     
     
-      <category term="c++" scheme="http://philxling.cn/tags/c/"/>
+      <category term="c++" scheme="http://philxling.club/tags/c/"/>
     
   </entry>
   
   <entry>
     <title>多线程爬虫</title>
-    <link href="http://philxling.cn/2020/04/13/python%E7%88%AC%E8%99%AB/13-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%88%AC%E8%99%AB/"/>
-    <id>http://philxling.cn/2020/04/13/python%E7%88%AC%E8%99%AB/13-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%88%AC%E8%99%AB/</id>
+    <link href="http://philxling.club/2020/04/13/python%E7%88%AC%E8%99%AB/13-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%88%AC%E8%99%AB/"/>
+    <id>http://philxling.club/2020/04/13/python%E7%88%AC%E8%99%AB/13-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%88%AC%E8%99%AB/</id>
     <published>2020-04-13T14:46:23.000Z</published>
     <updated>2020-10-15T04:26:41.926Z</updated>
     
@@ -385,19 +407,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>csv文件处理</title>
-    <link href="http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/"/>
-    <id>http://philxling.cn/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</id>
+    <link href="http://philxling.club/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/"/>
+    <id>http://philxling.club/2020/04/11/python%E7%88%AC%E8%99%AB/12-csv%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</id>
     <published>2020-04-11T15:40:12.000Z</published>
     <updated>2020-10-15T04:26:41.926Z</updated>
     
@@ -410,19 +432,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>继承和多态</title>
-    <link href="http://philxling.cn/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/"/>
-    <id>http://philxling.cn/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</id>
+    <link href="http://philxling.club/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/"/>
+    <id>http://philxling.club/2020/04/10/c++/4-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</id>
     <published>2020-04-10T15:15:56.000Z</published>
     <updated>2020-10-15T04:26:41.806Z</updated>
     
@@ -436,19 +458,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="c++" scheme="http://philxling.cn/categories/c/"/>
+      <category term="c++" scheme="http://philxling.club/categories/c/"/>
     
     
-      <category term="c++" scheme="http://philxling.cn/tags/c/"/>
+      <category term="c++" scheme="http://philxling.club/tags/c/"/>
     
-      <category term="面向对象" scheme="http://philxling.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+      <category term="面向对象" scheme="http://philxling.club/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>json文件处理</title>
-    <link href="http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/"/>
-    <id>http://philxling.cn/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</id>
+    <link href="http://philxling.club/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/"/>
+    <id>http://philxling.club/2020/04/10/python%E7%88%AC%E8%99%AB/11-json%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</id>
     <published>2020-04-09T19:00:12.000Z</published>
     <updated>2020-10-15T04:26:41.925Z</updated>
     
@@ -461,19 +483,19 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>MongoDB数据库</title>
-    <link href="http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <link href="http://philxling.club/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://philxling.club/2020/04/08/python%E7%88%AC%E8%99%AB/10-MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
     <published>2020-04-08T13:15:12.000Z</published>
     <updated>2020-10-15T04:26:41.925Z</updated>
     
@@ -487,41 +509,12 @@ Do what feels right to you&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;安卓开发�
     </summary>
     
     
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
+      <category term="python爬虫" scheme="http://philxling.club/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
+      <category term="python" scheme="http://philxling.club/tags/python/"/>
     
-      <category term="python爬虫" scheme="http://philxling.cn/tags/python%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL数据库</title>
-    <link href="http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://philxling.cn/2020/04/08/python%E7%88%AC%E8%99%AB/9-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
-    <published>2020-04-07T16:00:00.000Z</published>
-    <updated>2020-10-15T04:26:41.939Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><h1 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h1><h2 id="安装mysql："><a href="#安装mysql：" class="headerlink" title="安装mysql："></a>安装mysql：</h2><ol><li>在官网：<a href="https://dev.mysql.com/downloads/windows/installer/5.7.html" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/5.7.html</a></li><li>如果提示没有<code>.NET Framework</code>框架。那么就在提示框中找到下载链接，下载一个就可以了。</li><li>如果提示没有<code>Microsoft Virtual C++ x64(x86)</code>，那么百度或者谷歌这个软件安装即可。</li></ol><a id="more"></a><p>​    4. 如果没有找到。那么私聊我。</p><h2 id="navicat："><a href="#navicat：" class="headerlink" title="navicat："></a>navicat：</h2><p>navicat是一个操作mysql数据库非常方便的软件。使用他操作数据库，就跟使用excel操作数据是一样的。</p><h2 id="安装驱动程序："><a href="#安装驱动程序：" class="headerlink" title="安装驱动程序："></a>安装驱动程序：</h2><p>Python要想操作MySQL。必须要有一个中间件，或者叫做驱动程序。驱动程序有很多。比如有<code>mysqldb</code>、<code>mysqlclient</code>、<code>pymysql</code>等。在这里，我们选择用<code>pymysql</code>。安装方式也是非常简单，通过命令<code>pip install pymysql</code>即可安装。</p><h2 id="数据库连接："><a href="#数据库连接：" class="headerlink" title="数据库连接："></a>数据库连接：</h2><p>数据库连接之前。首先先确认以下工作完成，这里我们以一个<code>pymysql_test</code>数据库.以下将介绍连接<code>mysql</code>的示例代码：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    user=<span class="string">'root'</span>,</span><br><span class="line">    password=<span class="string">'root'</span>,</span><br><span class="line">    database=<span class="string">'pymysql_test'</span>,</span><br><span class="line">    port=<span class="number">3306</span></span><br><span class="line">)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line">cursor.execute(<span class="string">"select 1"</span>)</span><br><span class="line">data = cursor.fetchone()</span><br><span class="line">print(data)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><h2 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    user=<span class="string">'root'</span>,</span><br><span class="line">    password=<span class="string">'root'</span>,</span><br><span class="line">    database=<span class="string">'pymysql_test'</span>,</span><br><span class="line">    port=<span class="number">3306</span></span><br><span class="line">)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">insert into user(</span></span><br><span class="line"><span class="string">    id,username,gender,age,password</span></span><br><span class="line"><span class="string">  ) </span></span><br><span class="line"><span class="string">  values(null,'abc',1,18,'111111');</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><p>如果在数据还不能保证的情况下，可以使用以下方式来插入数据：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">insert into user(</span></span><br><span class="line"><span class="string">    id,username,gender,age,password</span></span><br><span class="line"><span class="string">  ) </span></span><br><span class="line"><span class="string">  values(null,%s,%s,%s,%s);</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql,(<span class="string">'spider'</span>,<span class="number">1</span>,<span class="number">20</span>,<span class="string">'222222'</span>))</span><br></pre></td></tr></tbody></table></figure><h2 id="查找数据："><a href="#查找数据：" class="headerlink" title="查找数据："></a>查找数据：</h2><p>使用<code>pymysql</code>查询数据。可以使用<code>fetch*</code>方法。</p><ol><li><code>fetchone()</code>：这个方法每次之获取一条数据。</li><li><code>fetchall()</code>：这个方法接收全部的返回结果。</li><li><code>fetchmany(size)</code>：可以获取指定条数的数据。<br>示例代码如下：</li></ol><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    result = cursor.fetchone()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> result:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><p>或者是直接使用<code>fetchall</code>，一次性可以把所有满足条件的数据都取出来：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><p>或者是使用<code>fetchmany</code>，指定获取多少条数据：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">select * from user</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">results = cursor.fetchmany(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    print(result)</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><h2 id="删除数据："><a href="#删除数据：" class="headerlink" title="删除数据："></a>删除数据：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cursor = db.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">delete from user where id=1</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></tbody></table></figure><h2 id="更新数据："><a href="#更新数据：" class="headerlink" title="更新数据："></a>更新数据：</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>,password=<span class="string">'root'</span>,database=<span class="string">'pymysql_demo'</span>,port=<span class="number">3306</span>)</span><br><span class="line">cursor = conn.cursor()</span><br><span class="line"></span><br><span class="line">sql = <span class="string">"""</span></span><br><span class="line"><span class="string">update user set username='aaa' where id=1</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">conn.commit()</span><br><span class="line"></span><br><span class="line">conn.close()</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;MySQL数据库&quot;&gt;&lt;a href=&quot;#MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;MySQL数据库&quot;&gt;&lt;/a&gt;MySQL数据库&lt;/h1&gt;&lt;h2 id=&quot;安装mysql：&quot;&gt;&lt;a href=&quot;#安装mysql：&quot; class=&quot;headerlink&quot; title=&quot;安装mysql：&quot;&gt;&lt;/a&gt;安装mysql：&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;在官网：&lt;a href=&quot;https://dev.mysql.com/downloads/windows/installer/5.7.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://dev.mysql.com/downloads/windows/installer/5.7.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;如果提示没有&lt;code&gt;.NET Framework&lt;/code&gt;框架。那么就在提示框中找到下载链接，下载一个就可以了。&lt;/li&gt;
-&lt;li&gt;如果提示没有&lt;code&gt;Microsoft Virtual C++ x64(x86)&lt;/code&gt;，那么百度或者谷歌这个软件安装即可。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="python爬虫" scheme="http://philxling.cn/categories/python%E7%88%AC%E8%99%AB/"/>
-    
-    
-      <category term="python" scheme="http://philxling.cn/tags/python/"/>
-    
-      <category term="mysql" scheme="http://philxling.cn/tags/mysql/"/>
+      <category term="python爬虫" scheme="http://philxling.club/tags/python%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
