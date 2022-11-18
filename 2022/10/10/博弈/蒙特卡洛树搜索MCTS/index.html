@@ -96,15 +96,15 @@
 
 
 
-<meta name="description" content="蒙特卡洛树简介1 蒙特卡洛树搜索是一类树搜索算法的统称,称为MCTS,是一种启发式搜索算法,在搜索空间极大的游戏中比较有效,它的目标是给定一个游戏状态,选择最佳的一步,如Alpha Go. 步骤1 选择: 选择能够最大化UCB值的节点 1UCB = Vi+c*sqot(lnN/ni) c=2  2 扩展: 创建一个或多个子节点 3 仿真: 在某一结点用随机策略进行游戏 4 反向传播: 使用随机搜索">
+<meta name="description" content="蒙特卡洛树简介1 蒙特卡洛树搜索是一类树搜索算法的统称,称为MCTS,是一种启发式搜索算法,在搜索空间极大的游戏中比较有效,它的目标是给定一个游戏状态,选择最佳的一步,如Alpha Go.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蒙特卡洛树搜索MCTS实现五子棋">
 <meta property="og:url" content="http://philxling.club/2022/10/10/%E5%8D%9A%E5%BC%88/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2MCTS/index.html">
 <meta property="og:site_name" content="philxling">
-<meta property="og:description" content="蒙特卡洛树简介1 蒙特卡洛树搜索是一类树搜索算法的统称,称为MCTS,是一种启发式搜索算法,在搜索空间极大的游戏中比较有效,它的目标是给定一个游戏状态,选择最佳的一步,如Alpha Go. 步骤1 选择: 选择能够最大化UCB值的节点 1UCB = Vi+c*sqot(lnN/ni) c=2  2 扩展: 创建一个或多个子节点 3 仿真: 在某一结点用随机策略进行游戏 4 反向传播: 使用随机搜索">
+<meta property="og:description" content="蒙特卡洛树简介1 蒙特卡洛树搜索是一类树搜索算法的统称,称为MCTS,是一种启发式搜索算法,在搜索空间极大的游戏中比较有效,它的目标是给定一个游戏状态,选择最佳的一步,如Alpha Go.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-10T08:48:54.000Z">
-<meta property="article:modified_time" content="2022-11-18T03:41:40.353Z">
+<meta property="article:modified_time" content="2022-11-18T04:34:23.995Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="博弈">
@@ -451,6 +451,8 @@
 
       
         <h1 id="蒙特卡洛树"><a href="#蒙特卡洛树" class="headerlink" title="蒙特卡洛树"></a>蒙特卡洛树</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>1 蒙特卡洛树搜索是一类树搜索算法的统称,称为MCTS,是一种启发式搜索算法,在搜索空间极大的游戏中比较有效,它的目标是给定一个游戏状态,选择最佳的一步,如Alpha Go.</p>
+<a id="more"></a>
+
 <h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1 选择: 选择能够最大化UCB值的节点</p>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UCB = Vi+c*sqot(lnN/ni) c=2</span><br></pre></td></tr></tbody></table></figure>
 
