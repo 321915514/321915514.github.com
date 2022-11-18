@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://philxling.club/2022/10/10/%E5%8D%9A%E5%BC%88/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2MCTS/</loc>
+    <loc>http://philxling.club/2020/05/26/linux/linuxday2/</loc>
     
-    <lastmod>2022-11-18T04:34:23.995Z</lastmod>
+    <lastmod>2022-11-18T11:15:14.142Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.club/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/</loc>
+    
+    <lastmod>2022-11-18T11:14:37.933Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://philxling.club/2022/03/22/python%E7%88%AC%E8%99%AB/18-CrawlSpider/</loc>
     
-    <lastmod>2022-03-22T01:44:18.630Z</lastmod>
+    <lastmod>2022-11-18T11:14:02.204Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.club/2022/10/10/%E5%8D%9A%E5%BC%88/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2MCTS/</loc>
+    
+    <lastmod>2022-11-18T11:03:07.685Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://philxling.club/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</loc>
+    
+    <lastmod>2022-11-18T11:02:54.352Z</lastmod>
     
   </url>
   
@@ -37,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://philxling.club/archives/index.html</loc>
+    <loc>http://philxling.club/categories/index.html</loc>
     
     <lastmod>2020-10-15T04:26:42.004Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://philxling.club/categories/index.html</loc>
+    <loc>http://philxling.club/archives/index.html</loc>
     
     <lastmod>2020-10-15T04:26:42.004Z</lastmod>
     
@@ -275,30 +296,9 @@
   </url>
   
   <url>
-    <loc>http://philxling.club/2020/08/10/Android/Android%E5%B8%83%E5%B1%80%E5%B1%9E%E6%80%A7/</loc>
-    
-    <lastmod>2020-10-15T04:26:41.689Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://philxling.club/2020/07/06/Android/Android/</loc>
     
     <lastmod>2020-10-15T04:26:41.689Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://philxling.club/2020/05/26/linux/linuxday2/</loc>
-    
-    <lastmod>2020-10-15T03:51:03.216Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://philxling.club/2020/06/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML%E7%B1%BB%E5%9B%BE/</loc>
-    
-    <lastmod>2020-06-24T10:52:38.083Z</lastmod>
     
   </url>
   

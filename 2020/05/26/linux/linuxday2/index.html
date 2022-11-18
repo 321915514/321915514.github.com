@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next mist use-motion" lang="en"><head>
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head>
 <script type="text/javascript" src="/js/src/love.js"></script>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,7 +102,6 @@
 <meta property="og:url" content="http://philxling.club/2020/05/26/linux/linuxday2/index.html">
 <meta property="og:site_name" content="philxling">
 <meta property="og:description" content="linuxman```用于查看linux文档，第1章shell命令，第二章库函数，等123456789101112```alias ls```查看ls命令是否被封装```echo```输出如：```echo $PATH```输出path变量的值vim编辑器：命令模式，编辑模式，末行模式；![image-20200526193729409](assets/image-2020052619372940">
-<meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://philxling.club/2020/05/26/linux/linuxday2/image-20200526201257734.png">
 <meta property="og:image" content="http://philxling.club/2020/05/26/linux/linuxday2/image-20200526205940376.png">
 <meta property="og:image" content="http://philxling.club/2020/05/26/linux/linuxday2/image-20200527042758106.png">
@@ -110,7 +109,7 @@
 <meta property="og:image" content="http://philxling.club/2020/05/26/linux/linuxday2/image-20200528204843533.png">
 <meta property="og:image" content="http://philxling.club/2020/05/26/linux/linuxday2/image-20200628183100651.png">
 <meta property="article:published_time" content="2020-05-26T11:02:16.000Z">
-<meta property="article:modified_time" content="2020-10-15T03:51:03.216Z">
+<meta property="article:modified_time" content="2022-11-18T11:15:14.142Z">
 <meta property="article:author" content="philxling">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
@@ -124,7 +123,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
@@ -132,7 +131,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -164,7 +163,7 @@
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -212,7 +211,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -222,7 +221,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
@@ -232,7 +231,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -242,7 +241,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -252,7 +251,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -265,7 +264,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
-            Search
+            搜索
           </a>
         </li>
       
@@ -284,7 +283,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -350,7 +349,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-26T19:02:16+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T19:02:16+08:00">
                 2020-05-26
               </time>
             
@@ -416,9 +415,9 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Words count in article:</span>
+                  <span class="post-meta-item-text">字数统计:</span>
                 
-                <span title="Words count in article">
+                <span title="字数统计">
                   113字
                 </span>
               
@@ -432,9 +431,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Reading time ≈</span>
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
                 
-                <span title="Reading time">
+                <span title="阅读时长">
                   1分钟
                 </span>
               
@@ -456,7 +455,7 @@
       
 
       
-        <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><figure class="highlight plain"><figcaption><span>man```用于查看linux文档，第1章shell命令，第二章库函数，等</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```alias ls```查看ls命令是否被封装</span><br><span class="line"></span><br><span class="line">```echo```输出如：```echo $PATH```输出path变量的值</span><br><span class="line"></span><br><span class="line">vim编辑器：命令模式，编辑模式，末行模式；</span><br><span class="line"></span><br><span class="line">![image-20200526193729409](assets/image-20200526193729409.png)</span><br><span class="line"></span><br><span class="line">![image-20200526194253885](assets/image-20200526194253885.png)</span><br><span class="line"></span><br><span class="line">查找```/字符;?字符;#;```/从光标向下查找，？从光标向上查找，#标注这个单词。遍历的快捷键```n/N</span><br></pre></td></tr></tbody></table></figure>
+        <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><figure class="highlight plain"><figcaption><span>man```用于查看linux文档，第1章shell命令，第二章库函数，等</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```alias ls```查看ls命令是否被封装</span><br><span class="line"><!--more--></span><br><span class="line">```echo```输出如：```echo $PATH```输出path变量的值</span><br><span class="line"></span><br><span class="line">vim编辑器：命令模式，编辑模式，末行模式；</span><br><span class="line"></span><br><span class="line">![image-20200526193729409](assets/image-20200526193729409.png)</span><br><span class="line"></span><br><span class="line">![image-20200526194253885](assets/image-20200526194253885.png)</span><br><span class="line"></span><br><span class="line">查找```/字符;?字符;#;```/从光标向下查找，？从光标向上查找，#标注这个单词。遍历的快捷键```n/N</span><br></pre></td></tr></tbody></table></figure>
 
 <p>缩进：向右>>；向左<<。</p>
 <p><img src="/2020/05/26/linux/linuxday2/image-20200526201257734.png" alt="image-20200526201257734"></p>
@@ -507,7 +506,7 @@
   <p><span>本文标题:</span><a href="/2020/05/26/linux/linuxday2/">linux库函数</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 philxling 的个人博客">philxling</a></p>
   <p><span>发布时间:</span>2020年05月26日 - 19:02</p>
-  <p><span>最后更新:</span>2020年10月15日 - 11:51</p>
+  <p><span>最后更新:</span>2022年11月18日 - 19:15</p>
   <p><span>原始链接:</span><a href="/2020/05/26/linux/linuxday2/" title="linux库函数">http://philxling.club/2020/05/26/linux/linuxday2/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://philxling.club/2020/05/26/linux/linuxday2/" aria-label="复制成功！"></i></span>
   </p>
@@ -557,21 +556,21 @@
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
   <div>谢谢你给我糖吃!!!</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="philxling WeChat Pay">
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="philxling 微信支付">
+        <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="philxling Alipay">
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="philxling 支付宝">
+        <p>支付宝</p>
       </div>
     
 
@@ -587,16 +586,16 @@
       <div>
         <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>Post author:</strong>
+    <strong>本文作者：</strong>
     philxling
   </li>
   <li class="post-copyright-link">
-    <strong>Post link:</strong>
+    <strong>本文链接：</strong>
     <a href="http://philxling.club/2020/05/26/linux/linuxday2/" title="linux库函数">http://philxling.club/2020/05/26/linux/linuxday2/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>Copyright Notice: </strong>
-    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
   </li>
 </ul>
 
@@ -708,10 +707,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -732,7 +731,7 @@
                 <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">39</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -743,7 +742,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -754,7 +753,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">15</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -824,7 +823,7 @@
       
 
       
-
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=6686195784&auto=1&height=90"></iframe>
     </div>
   </aside>
 
@@ -863,7 +862,7 @@
   </span>
 </div>
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -871,7 +870,7 @@
 
 
 
-  <div class="theme-info">Theme — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -1002,6 +1001,13 @@ setInterval("createtime()",250);
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
@@ -1480,6 +1486,6 @@ setInterval("createtime()",250);
 
   
 
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
