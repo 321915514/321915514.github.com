@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ScrapyShell</title>
-    <url>/2022/04/12/python%E7%88%AC%E8%99%AB/19-ScrapyShell/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="4-ScrapyShell"><a href="#4-ScrapyShell" class="headerlink" title="4-ScrapyShell"></a>4-ScrapyShell</h1><a id="more"></a>
-<p>我们想要在爬虫中使用xpath、beautifulsoup、正则表达式、css选择器等来提取想要的数据。但是因为<code>scrapy</code>是一个比较重的框架。每次运行起来都要等待一段时间。因此要去验证我们写的提取规则是否正确，是一个比较麻烦的事情。因此<code>Scrapy</code>提供了一个shell，用来方便的测试规则。当然也不仅仅局限于这一个功能。</p>
-<h2 id="打开Scrapy-Shell："><a href="#打开Scrapy-Shell：" class="headerlink" title="打开Scrapy Shell："></a>打开Scrapy Shell：</h2><p>打开cmd终端，进入到<code>Scrapy</code>项目所在的目录，然后进入到<code>scrapy</code>框架所在的虚拟环境中，输入命令<code>scrapy shell [链接]</code>。就会进入到scrapy的shell环境中。在这个环境中，你可以跟在爬虫的<code>parse</code>方法中一样使用了。 </p>
-</body></html>]]></content>
-      <categories>
-        <category>python爬虫</category>
-      </categories>
-      <tags>
-        <tag>python爬虫</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>redis数据库介绍</title>
     <url>/2022/04/12/python%E7%88%AC%E8%99%AB/25-redis%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<html><head></head><body><h1 id="1-redis数据库介绍"><a href="#1-redis数据库介绍" class="headerlink" title="1-redis数据库介绍"></a>1-redis数据库介绍</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><a id="more"></a>
@@ -288,6 +273,21 @@
 </ul>
 </li>
 </ol>
+</body></html>]]></content>
+      <categories>
+        <category>python爬虫</category>
+      </categories>
+      <tags>
+        <tag>python爬虫</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ScrapyShell</title>
+    <url>/2022/04/12/python%E7%88%AC%E8%99%AB/19-ScrapyShell/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="4-ScrapyShell"><a href="#4-ScrapyShell" class="headerlink" title="4-ScrapyShell"></a>4-ScrapyShell</h1><a id="more"></a>
+<p>我们想要在爬虫中使用xpath、beautifulsoup、正则表达式、css选择器等来提取想要的数据。但是因为<code>scrapy</code>是一个比较重的框架。每次运行起来都要等待一段时间。因此要去验证我们写的提取规则是否正确，是一个比较麻烦的事情。因此<code>Scrapy</code>提供了一个shell，用来方便的测试规则。当然也不仅仅局限于这一个功能。</p>
+<h2 id="打开Scrapy-Shell："><a href="#打开Scrapy-Shell：" class="headerlink" title="打开Scrapy Shell："></a>打开Scrapy Shell：</h2><p>打开cmd终端，进入到<code>Scrapy</code>项目所在的目录，然后进入到<code>scrapy</code>框架所在的虚拟环境中，输入命令<code>scrapy shell [链接]</code>。就会进入到scrapy的shell环境中。在这个环境中，你可以跟在爬虫的<code>parse</code>方法中一样使用了。 </p>
 </body></html>]]></content>
       <categories>
         <category>python爬虫</category>
@@ -1620,8 +1620,8 @@ notSure = <span class="string">'hello'</span>;
         <category>python爬虫</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>mysql</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2249,8 +2249,8 @@ notSure = <span class="string">'hello'</span>;
         <category>博弈</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>博弈</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
